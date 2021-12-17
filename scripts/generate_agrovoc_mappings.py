@@ -12,9 +12,11 @@ from biomappings import PredictionTuple
 from biomappings.resources import append_prediction_tuples
 from biomappings.utils import get_script_url
 
+import csv
+
 AGROVOC_VERSION = "2021-12-02"
 QUERY = """
-SELECT ?id ?label {
+SELECT distinct ?id ?label {
     ?term skosxl:prefLabel / skosxl:literalForm ?label .
     OPTIONAL { ?term skos:scopeNote ?description } .
     FILTER (lang(?label) = 'en') .
@@ -22,7 +24,12 @@ SELECT ?id ?label {
     BIND(strafter(str(?term), "_") as ?id)
 }
 """
-
+# TODO include additional ns labels from agrovoc in QUERY, per list in ../agrovoc-ns.csv, to ~/.local/lib/python3.8/site-packages/pyobo/sources
+# Added:
+#     graph.bind("owl", OWL)
+#     graph.bind("rdfs-schema", RDFS)
+#     graph.bind("foaf", FOAF)
+# Result: no change
 
 def main():
     """Generate mappings from AGRO to AGROVOC."""
@@ -35,7 +42,10 @@ def main():
         f"got RDF graph for AGROVOC {graph} with {len(graph)} triples in {time.time() - t:.2f} seconds"
     )
     rows = []
+    sparql_write = open("agrovoc_sparql_query.csv", 'a+', newline='')
+    csvwriter = csv.writer(sparql_write)
     for identifier, name in tqdm(graph.query(QUERY)):
+        csvwriter.writerow([identifier, name])
         for scored_match in grounder.ground(name):
             rows.append(
                 PredictionTuple(
