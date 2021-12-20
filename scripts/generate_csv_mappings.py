@@ -40,15 +40,18 @@ def main():
     rows = []
     # sparql_write = open("agrovoc_sparql_query.csv", 'a+', newline='')
     # csvwriter = csv.writer(sparql_write)
-    for identifier, name in tqdm(graph.query(QUERY)):
-
-        # csvwriter.writerow([identifier, name])
+    
+    # with open(GILDA_MAPPINGS, "r") as fh:
+    reader_csv = open("/home/agar2/Documents/1Projects/7WorkProjects/2Projects/ERA/ttl-terms-export-v2.csv", 'r')
+    for identifier, name in csv.reader(reader_csv):
+        print(name)
         for scored_match in grounder.ground(name):
+            print(scored_match)
             rows.append(
                 PredictionTuple(
-                    # "agrovoc",
-                    # identifier,
-                    # name,
+                    "ERA",
+                    identifier,
+                    name,
                     "skos:exactMatch",
                     scored_match.term.db.lower(),
                     scored_match.term.id,
