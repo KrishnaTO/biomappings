@@ -1,1 +1,393 @@
 source prefix	source identifier	source name	relation	target prefix	target identifier	target name	type	confidence	source
+era		Irrigation	skos:exactMatch	agro	00000006	irrigation process	lexical	0.5400948258091115	https://era.ccafs.cgiar.org/ontology/
+era		Conventional Tillage	skos:exactMatch	agro	00000015	conventional tillage process	lexical	0.5400948258091115	https://era.ccafs.cgiar.org/ontology/
+era		Reduced Tillage	skos:exactMatch	agro	00000016	reduced tillage process	lexical	0.5400948258091115	https://era.ccafs.cgiar.org/ontology/
+era		Drip Irrigation	skos:exactMatch	agro	00000056	drip irrigation process	lexical	0.5400948258091115	https://era.ccafs.cgiar.org/ontology/
+era		Green Manure	skos:exactMatch	agro	00000075	green manure	lexical	0.7623170480313337	https://era.ccafs.cgiar.org/ontology/
+era		Mulch	skos:exactMatch	agro	00000092	mulch	lexical	0.7623170480313337	https://era.ccafs.cgiar.org/ontology/
+era		Plastic Mulch	skos:exactMatch	agro	00000093	plastic mulch	lexical	0.7623170480313337	https://era.ccafs.cgiar.org/ontology/
+era		Crop Residue	skos:exactMatch	agro	00000154	crop residue	lexical	0.7623170480313337	https://era.ccafs.cgiar.org/ontology/
+era		Bunds	skos:exactMatch	agro	00000196	bund	lexical	0.7623170480313337	https://era.ccafs.cgiar.org/ontology/
+era		Rotational Grazing	skos:exactMatch	agro	00000430	rotational grazing	lexical	0.7623170480313337	https://era.ccafs.cgiar.org/ontology/
+era		Controlled Grazing	skos:exactMatch	agro	00000434	controlled grazing	lexical	0.7623170480313337	https://era.ccafs.cgiar.org/ontology/
+era		Crop Rotation	skos:exactMatch	agro	00000469	crop rotation process	lexical	0.5400948258091115	https://era.ccafs.cgiar.org/ontology/
+era		Monoculture	skos:exactMatch	agro	00000481	monoculture	lexical	0.7623170480313337	https://era.ccafs.cgiar.org/ontology/
+era		Intercropping	skos:exactMatch	agro	00000516	intercropping	lexical	0.7623170480313337	https://era.ccafs.cgiar.org/ontology/
+era		Aboveground Biomass	skos:exactMatch	agro	00000546	aboveground biomass	lexical	0.7623170480313337	https://era.ccafs.cgiar.org/ontology/
+era		Belowground Biomass	skos:exactMatch	agro	00000547	below-ground biomass	lexical	0.7713873428159143	https://era.ccafs.cgiar.org/ontology/
+era		Alleycropping	skos:exactMatch	agro	00000579	alley cropping	lexical	0.5400948258091115	https://era.ccafs.cgiar.org/ontology/
+era		Silvopasture	skos:exactMatch	agro	00000580	silvopasture	lexical	0.7623170480313337	https://era.ccafs.cgiar.org/ontology/
+era		Multistrata Agroforestry	skos:exactMatch	agro	00000581	multistrata agroforestry	lexical	0.7623170480313337	https://era.ccafs.cgiar.org/ontology/
+era		Agroforestry Fallow	skos:exactMatch	agro	00000583	agroforestry fallow	lexical	0.7623170480313337	https://era.ccafs.cgiar.org/ontology/
+era		Agroforestry	skos:exactMatch	agro	00000584	agroforestry	lexical	0.7623170480313337	https://era.ccafs.cgiar.org/ontology/
+era		Deficit Irrigation	skos:exactMatch	agro	00000586	deficit irrigation process	lexical	0.5400948258091115	https://era.ccafs.cgiar.org/ontology/
+era		Alternate Partial Rootzone Irrigation	skos:exactMatch	agro	00000587	alternate partial rootzone irrigation process	lexical	0.5400948258091115	https://era.ccafs.cgiar.org/ontology/
+era		Supplemental Irrigation	skos:exactMatch	agro	00000588	supplemental irrigation	lexical	0.7623170480313337	https://era.ccafs.cgiar.org/ontology/
+era		Water Harvesting	skos:exactMatch	agro	00000589	water harvesting	lexical	0.7623170480313337	https://era.ccafs.cgiar.org/ontology/
+era		Grass Strips	skos:exactMatch	agro	00000591	grass strip	lexical	0.7623170480313337	https://era.ccafs.cgiar.org/ontology/
+era		Organic Fertilizer	skos:exactMatch	agro	00002039	organic fertilizer	lexical	0.7623170480313337	https://era.ccafs.cgiar.org/ontology/
+era		Inorganic Fertilizer	skos:exactMatch	agro	00002040	inorganic fertilizer	lexical	0.7623170480313337	https://era.ccafs.cgiar.org/ontology/
+era		Biochar	skos:exactMatch	agro	00020002	biochar	lexical	0.7623170480313337	https://era.ccafs.cgiar.org/ontology/
+era		Stevia	skos:exactMatch	chebi	145012	rebaudioside A	lexical	0.5555555555555556	https://era.ccafs.cgiar.org/ontology/
+era		Urea	skos:exactMatch	chebi	16199	urea	lexical	0.7623170480313337	https://era.ccafs.cgiar.org/ontology/
+era		N	skos:exactMatch	chebi	17196	L-asparagine	lexical	0.5555555555555556	https://era.ccafs.cgiar.org/ontology/
+era		Peas	skos:exactMatch	chebi	17553	O-phosphoethanolamine	lexical	0.5400948258091115	https://era.ccafs.cgiar.org/ontology/
+era		Caprine	skos:exactMatch	chebi	18347	L-norleucine	lexical	0.5555555555555556	https://era.ccafs.cgiar.org/ontology/
+era		N	skos:exactMatch	chebi	22653	asparagine	lexical	0.5555555555555556	https://era.ccafs.cgiar.org/ontology/
+era		N	skos:exactMatch	chebi	25555	nitrogen atom	lexical	0.5555555555555556	https://era.ccafs.cgiar.org/ontology/
+era		Tea	skos:exactMatch	chebi	28621	triethanolamine	lexical	0.5400948258091115	https://era.ccafs.cgiar.org/ontology/
+era		Rubber	skos:exactMatch	chebi	28798	rubber particle	lexical	0.5555555555555556	https://era.ccafs.cgiar.org/ontology/
+era		N	skos:exactMatch	chebi	30222	neutron	lexical	0.5400948258091115	https://era.ccafs.cgiar.org/ontology/
+era		Ash	skos:exactMatch	chebi	33104	hydridoarsenic(2.) (triplet)	lexical	0.5215419501133787	https://era.ccafs.cgiar.org/ontology/
+era		Fertilizer	skos:exactMatch	chebi	33287	fertilizer	lexical	0.7623170480313337	https://era.ccafs.cgiar.org/ontology/
+era		N	skos:exactMatch	chebi	33792	canonical ribonucleoside residue	lexical	0.5555555555555556	https://era.ccafs.cgiar.org/ontology/
+era		Tea	skos:exactMatch	chebi	35026	triethylamine	lexical	0.5400948258091115	https://era.ccafs.cgiar.org/ontology/
+era		Dam	skos:exactMatch	chebi	4480	diacetylmonoxime	lexical	0.5400948258091115	https://era.ccafs.cgiar.org/ontology/
+era		N	skos:exactMatch	chebi	50347	L-asparagine residue	lexical	0.5555555555555556	https://era.ccafs.cgiar.org/ontology/
+era		Rubber	skos:exactMatch	chebi	53405	poly(isoprene) macromolecule	lexical	0.5555555555555556	https://era.ccafs.cgiar.org/ontology/
+era		Peas	skos:exactMatch	chebi	71464	palmitoyl ethanolamide	lexical	0.5400948258091115	https://era.ccafs.cgiar.org/ontology/
+era		Dam	skos:exactMatch	envo	00000074	dam	lexical	0.7623170480313337	https://era.ccafs.cgiar.org/ontology/
+era		Trench	skos:exactMatch	envo	00000100	valley	lexical	0.5400948258091115	https://era.ccafs.cgiar.org/ontology/
+era		Terraces	skos:exactMatch	envo	00000104	undersea feature	lexical	0.5400948258091115	https://era.ccafs.cgiar.org/ontology/
+era		Wood	skos:exactMatch	envo	00000109	woodland area	lexical	0.5400948258091115	https://era.ccafs.cgiar.org/ontology/
+era		Wood	skos:exactMatch	envo	00000111	forested area	lexical	0.5400948258091115	https://era.ccafs.cgiar.org/ontology/
+era		Wood	skos:exactMatch	envo	00000118	coconut plantation	lexical	0.5400948258091115	https://era.ccafs.cgiar.org/ontology/
+era		Wood	skos:exactMatch	envo	00000193	olive grove	lexical	0.5400948258091115	https://era.ccafs.cgiar.org/ontology/
+era		Trench	skos:exactMatch	envo	00000275	ocean trench	lexical	0.5555555555555556	https://era.ccafs.cgiar.org/ontology/
+era		Terraces	skos:exactMatch	envo	00000415	raised beach	lexical	0.5400948258091115	https://era.ccafs.cgiar.org/ontology/
+era		Dam	skos:exactMatch	envo	00000500	beaver dam	lexical	0.5400948258091115	https://era.ccafs.cgiar.org/ontology/
+era		Terraces	skos:exactMatch	envo	00000508	terrace	lexical	0.7623170480313337	https://era.ccafs.cgiar.org/ontology/
+era		Soil	skos:exactMatch	envo	00001998	soil	lexical	0.7623170480313337	https://era.ccafs.cgiar.org/ontology/
+era		Wood	skos:exactMatch	envo	00002040	wood	lexical	0.7623170480313337	https://era.ccafs.cgiar.org/ontology/
+era		Biosolids	skos:exactMatch	envo	00002059	biosolids	lexical	0.7623170480313337	https://era.ccafs.cgiar.org/ontology/
+era		Compost	skos:exactMatch	envo	00002170	compost	lexical	0.7623170480313337	https://era.ccafs.cgiar.org/ontology/
+era		Oil	skos:exactMatch	envo	00002985	oil	lexical	0.7623170480313337	https://era.ccafs.cgiar.org/ontology/
+era		Biomass	skos:exactMatch	envo	01000155	organic material	lexical	0.5400948258091115	https://era.ccafs.cgiar.org/ontology/
+era		Biogas	skos:exactMatch	envo	01000556	biogas	lexical	0.7623170480313337	https://era.ccafs.cgiar.org/ontology/
+era		Trench	skos:exactMatch	envo	01000649	trench	lexical	0.7623170480313337	https://era.ccafs.cgiar.org/ontology/
+era		Carbon Dioxide Emissions	skos:exactMatch	envo	01000770	carbon dioxide emission	lexical	0.7623170480313337	https://era.ccafs.cgiar.org/ontology/
+era		Manure Storage	skos:exactMatch	envo	01001115	manure storage space	lexical	0.5400948258091115	https://era.ccafs.cgiar.org/ontology/
+era		Erosion	skos:exactMatch	envo	01001346	erosion	lexical	0.7623170480313337	https://era.ccafs.cgiar.org/ontology/
+era		Fodders	skos:exactMatch	envo	02000047	animal feed	lexical	0.5400948258091115	https://era.ccafs.cgiar.org/ontology/
+era		Ash	skos:exactMatch	envo	02000090	ash	lexical	0.7623170480313337	https://era.ccafs.cgiar.org/ontology/
+era		Soil Organic Matter	skos:exactMatch	envo	04000008	soil organic matter	lexical	0.7623170480313337	https://era.ccafs.cgiar.org/ontology/
+era		Biochar	skos:exactMatch	envo	2000007	biochar	lexical	0.7623170480313337	https://era.ccafs.cgiar.org/ontology/
+era		Energy	skos:exactMatch	envo	2000015	energy	lexical	0.7623170480313337	https://era.ccafs.cgiar.org/ontology/
+era		Root	skos:exactMatch	ncbitaxon	1	root	lexical	0.7623170480313337	https://era.ccafs.cgiar.org/ontology/
+era		Cavia porcellus	skos:exactMatch	ncbitaxon	10141	Cavia porcellus	lexical	0.7777777777777778	https://era.ccafs.cgiar.org/ontology/
+era		Guinea Pig	skos:exactMatch	ncbitaxon	10141	Cavia porcellus	lexical	0.5400948258091115	https://era.ccafs.cgiar.org/ontology/
+era		Cardamom	skos:exactMatch	ncbitaxon	105181	Elettaria cardamomum	lexical	0.5400948258091115	https://era.ccafs.cgiar.org/ontology/
+era		Drosanthemum floribundum	skos:exactMatch	ncbitaxon	1053344	Drosanthemum floribundum	lexical	0.7777777777777778	https://era.ccafs.cgiar.org/ontology/
+era		Themeda triandra	skos:exactMatch	ncbitaxon	106636	Themeda triandra	lexical	0.7777777777777778	https://era.ccafs.cgiar.org/ontology/
+era		Theobroma grandiflorum	skos:exactMatch	ncbitaxon	108881	Theobroma grandiflorum	lexical	0.7777777777777778	https://era.ccafs.cgiar.org/ontology/
+era		Pueraria phaseoloides	skos:exactMatch	ncbitaxon	109224	Neustanthus phaseoloides	lexical	0.5555555555555556	https://era.ccafs.cgiar.org/ontology/
+era		Andropogon gayanus	skos:exactMatch	ncbitaxon	1092577	Andropogon gayanus	lexical	0.7777777777777778	https://era.ccafs.cgiar.org/ontology/
+era		Talinum fruticosum	skos:exactMatch	ncbitaxon	110664	Talinum fruticosum	lexical	0.7777777777777778	https://era.ccafs.cgiar.org/ontology/
+era		Eragrostis tef	skos:exactMatch	ncbitaxon	110835	Eragrostis tef	lexical	0.7777777777777778	https://era.ccafs.cgiar.org/ontology/
+era		Chloris gayana	skos:exactMatch	ncbitaxon	110876	Chloris gayana	lexical	0.7777777777777778	https://era.ccafs.cgiar.org/ontology/
+era		Centrosema brasilianum	skos:exactMatch	ncbitaxon	1129165	Centrosema brasilianum	lexical	0.7777777777777778	https://era.ccafs.cgiar.org/ontology/
+era		Endive	skos:exactMatch	ncbitaxon	114280	Cichorium endivia	lexical	0.5400948258091115	https://era.ccafs.cgiar.org/ontology/
+era		Cichorium endivia	skos:exactMatch	ncbitaxon	114280	Cichorium endivia	lexical	0.7777777777777778	https://era.ccafs.cgiar.org/ontology/
+era		Vigna subterranea	skos:exactMatch	ncbitaxon	115715	Vigna subterranea	lexical	0.7777777777777778	https://era.ccafs.cgiar.org/ontology/
+era		Geranium incanum	skos:exactMatch	ncbitaxon	1158081	Geranium incanum	lexical	0.7777777777777778	https://era.ccafs.cgiar.org/ontology/
+era		Fish	skos:exactMatch	ncbitaxon	117565	Myxini	lexical	0.5400948258091115	https://era.ccafs.cgiar.org/ontology/
+era		Fish	skos:exactMatch	ncbitaxon	117569	Hyperoartia	lexical	0.5400948258091115	https://era.ccafs.cgiar.org/ontology/
+era		Celery	skos:exactMatch	ncbitaxon	117781	Apium graveolens Dulce Group	lexical	0.5400948258091115	https://era.ccafs.cgiar.org/ontology/
+era		Fish	skos:exactMatch	ncbitaxon	118072	Coelacanthimorpha	lexical	0.5400948258091115	https://era.ccafs.cgiar.org/ontology/
+era		Psidium guajava	skos:exactMatch	ncbitaxon	120290	Psidium guajava	lexical	0.7777777777777778	https://era.ccafs.cgiar.org/ontology/
+era		Guava	skos:exactMatch	ncbitaxon	120290	Psidium guajava	lexical	0.5400948258091115	https://era.ccafs.cgiar.org/ontology/
+era		Illicium verum	skos:exactMatch	ncbitaxon	124778	Illicium verum	lexical	0.7777777777777778	https://era.ccafs.cgiar.org/ontology/
+era		Cinnamon	skos:exactMatch	ncbitaxon	128608	Cinnamomum verum	lexical	0.5400948258091115	https://era.ccafs.cgiar.org/ontology/
+era		Hermannia pinnata	skos:exactMatch	ncbitaxon	133569	Hermannia pinnata	lexical	0.7777777777777778	https://era.ccafs.cgiar.org/ontology/
+era		Coffee	skos:exactMatch	ncbitaxon	13442	Coffea	lexical	0.5400948258091115	https://era.ccafs.cgiar.org/ontology/
+era		Coffea arabica	skos:exactMatch	ncbitaxon	13443	Coffea arabica	lexical	0.7777777777777778	https://era.ccafs.cgiar.org/ontology/
+era		Coffee	skos:exactMatch	ncbitaxon	13443	Coffea arabica	lexical	0.5400948258091115	https://era.ccafs.cgiar.org/ontology/
+era		Corylus avellana	skos:exactMatch	ncbitaxon	13451	Corylus avellana	lexical	0.7777777777777778	https://era.ccafs.cgiar.org/ontology/
+era		Dimorphotheca pluvialis	skos:exactMatch	ncbitaxon	13491	Dimorphotheca pluvialis	lexical	0.7777777777777778	https://era.ccafs.cgiar.org/ontology/
+era		Ribes grossularia	skos:exactMatch	ncbitaxon	135518	Ribes uva-crispa	lexical	0.5555555555555556	https://era.ccafs.cgiar.org/ontology/
+era		Curcuma longa	skos:exactMatch	ncbitaxon	136217	Curcuma longa	lexical	0.7777777777777778	https://era.ccafs.cgiar.org/ontology/
+era		Turmeric	skos:exactMatch	ncbitaxon	136217	Curcuma longa	lexical	0.5400948258091115	https://era.ccafs.cgiar.org/ontology/
+era		Cocos nucifera	skos:exactMatch	ncbitaxon	13894	Cocos nucifera	lexical	0.7777777777777778	https://era.ccafs.cgiar.org/ontology/
+era		Triadica sebifera	skos:exactMatch	ncbitaxon	139772	Triadica sebifera	lexical	0.7777777777777778	https://era.ccafs.cgiar.org/ontology/
+era		Pelargonium sidoides	skos:exactMatch	ncbitaxon	1417791	Pelargonium sidoides	lexical	0.7777777777777778	https://era.ccafs.cgiar.org/ontology/
+era		Pennisetum purpureum	skos:exactMatch	ncbitaxon	154765	Cenchrus purpureus	lexical	0.5555555555555556	https://era.ccafs.cgiar.org/ontology/
+era		Napier Grass	skos:exactMatch	ncbitaxon	154765	Cenchrus purpureus	lexical	0.549371263656978	https://era.ccafs.cgiar.org/ontology/
+era		Mucuna pruriens	skos:exactMatch	ncbitaxon	157652	Mucuna pruriens	lexical	0.7777777777777778	https://era.ccafs.cgiar.org/ontology/
+era		Vigna radiata	skos:exactMatch	ncbitaxon	157791	Vigna radiata	lexical	0.7777777777777778	https://era.ccafs.cgiar.org/ontology/
+era		Beta vulgaris	skos:exactMatch	ncbitaxon	161934	Beta vulgaris	lexical	0.7777777777777778	https://era.ccafs.cgiar.org/ontology/
+era		Crotalaria ochroleuca	skos:exactMatch	ncbitaxon	165772	Crotalaria ochroleuca	lexical	0.7777777777777778	https://era.ccafs.cgiar.org/ontology/
+era		Crotalaria retusa	skos:exactMatch	ncbitaxon	165774	Crotalaria retusa	lexical	0.7777777777777778	https://era.ccafs.cgiar.org/ontology/
+era		Chrysopogon zizanioides	skos:exactMatch	ncbitaxon	167337	Chrysopogon zizanioides	lexical	0.7777777777777778	https://era.ccafs.cgiar.org/ontology/
+era		Hemp	skos:exactMatch	ncbitaxon	1678924	Cannabis sativa subsp. sativa	lexical	0.5400948258091115	https://era.ccafs.cgiar.org/ontology/
+era		Anacardium occidentale	skos:exactMatch	ncbitaxon	171929	Anacardium occidentale	lexical	0.7777777777777778	https://era.ccafs.cgiar.org/ontology/
+era		Pennisetum clandestinum	skos:exactMatch	ncbitaxon	173850	Cenchrus clandestinus	lexical	0.5555555555555556	https://era.ccafs.cgiar.org/ontology/
+era		Jatropha curcas	skos:exactMatch	ncbitaxon	180498	Jatropha curcas	lexical	0.7777777777777778	https://era.ccafs.cgiar.org/ontology/
+era		Eruca vesicaria	skos:exactMatch	ncbitaxon	180536	Eruca vesicaria	lexical	0.7777777777777778	https://era.ccafs.cgiar.org/ontology/
+era		Ornithopus sativus	skos:exactMatch	ncbitaxon	181292	Ornithopus sativus	lexical	0.7777777777777778	https://era.ccafs.cgiar.org/ontology/
+era		Areca catechu	skos:exactMatch	ncbitaxon	184783	Areca catechu	lexical	0.7777777777777778	https://era.ccafs.cgiar.org/ontology/
+era		Yerba Mate	skos:exactMatch	ncbitaxon	185542	Ilex paraguariensis	lexical	0.5400948258091115	https://era.ccafs.cgiar.org/ontology/
+era		Ilex paraguariensis	skos:exactMatch	ncbitaxon	185542	Ilex paraguariensis	lexical	0.7777777777777778	https://era.ccafs.cgiar.org/ontology/
+era		Centrosema pubescens	skos:exactMatch	ncbitaxon	185703	Centrosema pubescens	lexical	0.7777777777777778	https://era.ccafs.cgiar.org/ontology/
+era		Centrosema pascuorum	skos:exactMatch	ncbitaxon	1983288	Centrosema pascuorum	lexical	0.7777777777777778	https://era.ccafs.cgiar.org/ontology/
+era		Solanum aethiopicum	skos:exactMatch	ncbitaxon	205524	Solanum aethiopicum	lexical	0.7777777777777778	https://era.ccafs.cgiar.org/ontology/
+era		Corchorus capsularis	skos:exactMatch	ncbitaxon	210143	Corchorus capsularis	lexical	0.7777777777777778	https://era.ccafs.cgiar.org/ontology/
+era		Drosanthemum speciosum	skos:exactMatch	ncbitaxon	215961	Drosanthemum speciosum	lexical	0.7777777777777778	https://era.ccafs.cgiar.org/ontology/
+era		Cloves	skos:exactMatch	ncbitaxon	219868	Syzygium aromaticum	lexical	0.5400948258091115	https://era.ccafs.cgiar.org/ontology/
+era		Syzygium aromaticum	skos:exactMatch	ncbitaxon	219868	Syzygium aromaticum	lexical	0.7777777777777778	https://era.ccafs.cgiar.org/ontology/
+era		Punica granatum	skos:exactMatch	ncbitaxon	22663	Punica granatum	lexical	0.7777777777777778	https://era.ccafs.cgiar.org/ontology/
+era		Pomegranate	skos:exactMatch	ncbitaxon	22663	Punica granatum	lexical	0.5400948258091115	https://era.ccafs.cgiar.org/ontology/
+era		Musa textilis	skos:exactMatch	ncbitaxon	228183	Musa textilis	lexical	0.7777777777777778	https://era.ccafs.cgiar.org/ontology/
+era		Pear	skos:exactMatch	ncbitaxon	23211	Pyrus communis	lexical	0.5400948258091115	https://era.ccafs.cgiar.org/ontology/
+era		Roella ciliata	skos:exactMatch	ncbitaxon	239471	Roella ciliata	lexical	0.7777777777777778	https://era.ccafs.cgiar.org/ontology/
+era		Brachiaria brizantha	skos:exactMatch	ncbitaxon	240448	Urochloa brizantha	lexical	0.5555555555555556	https://era.ccafs.cgiar.org/ontology/
+era		Brachiaria decumbens	skos:exactMatch	ncbitaxon	240449	Urochloa decumbens	lexical	0.5555555555555556	https://era.ccafs.cgiar.org/ontology/
+era		Brachiaria ruziziensis	skos:exactMatch	ncbitaxon	240450	Urochloa ruziziensis	lexical	0.5555555555555556	https://era.ccafs.cgiar.org/ontology/
+era		Congo Grass	skos:exactMatch	ncbitaxon	240450	Urochloa ruziziensis	lexical	0.549371263656978	https://era.ccafs.cgiar.org/ontology/
+era		Brachiaria humidicola	skos:exactMatch	ncbitaxon	240451	Brachiaria humidicola	lexical	0.7777777777777778	https://era.ccafs.cgiar.org/ontology/
+era		Drosanthemum striatum	skos:exactMatch	ncbitaxon	2483029	Drosanthemum striatum	lexical	0.7777777777777778	https://era.ccafs.cgiar.org/ontology/
+era		Aloe	skos:exactMatch	ncbitaxon	25641	Aloe	lexical	0.7777777777777778	https://era.ccafs.cgiar.org/ontology/
+era		Watermelon	skos:exactMatch	ncbitaxon	260674	Citrullus lanatus subsp. vulgaris	lexical	0.5400948258091115	https://era.ccafs.cgiar.org/ontology/
+era		Helichrysum petiolare	skos:exactMatch	ncbitaxon	261796	Helichrysum petiolare	lexical	0.7777777777777778	https://era.ccafs.cgiar.org/ontology/
+era		Pogonarthria squarrosa	skos:exactMatch	ncbitaxon	269603	Pogonarthria squarrosa	lexical	0.7777777777777778	https://era.ccafs.cgiar.org/ontology/
+era		Citrus sinensis	skos:exactMatch	ncbitaxon	2711	Citrus sinensis	lexical	0.7777777777777778	https://era.ccafs.cgiar.org/ontology/
+era		Pimpinella anisum	skos:exactMatch	ncbitaxon	271192	Pimpinella anisum	lexical	0.7777777777777778	https://era.ccafs.cgiar.org/ontology/
+era		Lablab	skos:exactMatch	ncbitaxon	271790	Lablab	lexical	0.7777777777777778	https://era.ccafs.cgiar.org/ontology/
+era		Chamaecrista rotundifolia	skos:exactMatch	ncbitaxon	279218	Chamaecrista rotundifolia	lexical	0.7777777777777778	https://era.ccafs.cgiar.org/ontology/
+era		Pennisetum pedicellatum	skos:exactMatch	ncbitaxon	281133	Cenchrus pedicellatus	lexical	0.5555555555555556	https://era.ccafs.cgiar.org/ontology/
+era		Fennel	skos:exactMatch	ncbitaxon	2849586	Anethum foeniculum	lexical	0.5400948258091115	https://era.ccafs.cgiar.org/ontology/
+era		Foeniculum vulgare	skos:exactMatch	ncbitaxon	2849586	Anethum foeniculum	lexical	0.5555555555555556	https://era.ccafs.cgiar.org/ontology/
+era		Pelargonium capitatum	skos:exactMatch	ncbitaxon	28967	Pelargonium capitatum	lexical	0.7777777777777778	https://era.ccafs.cgiar.org/ontology/
+era		Vitellaria paradoxa	skos:exactMatch	ncbitaxon	292385	Vitellaria paradoxa	lexical	0.7777777777777778	https://era.ccafs.cgiar.org/ontology/
+era		Mango	skos:exactMatch	ncbitaxon	29780	Mangifera indica	lexical	0.5400948258091115	https://era.ccafs.cgiar.org/ontology/
+era		Mangifera indica	skos:exactMatch	ncbitaxon	29780	Mangifera indica	lexical	0.7777777777777778	https://era.ccafs.cgiar.org/ontology/
+era		Unspecified	skos:exactMatch	ncbitaxon	32644	unidentified	lexical	0.5400948258091115	https://era.ccafs.cgiar.org/ontology/
+era		Ziziphus jujuba	skos:exactMatch	ncbitaxon	326968	Ziziphus jujuba	lexical	0.7777777777777778	https://era.ccafs.cgiar.org/ontology/
+era		Animals	skos:exactMatch	ncbitaxon	33208	Metazoa	lexical	0.5400948258091115	https://era.ccafs.cgiar.org/ontology/
+era		Persea americana	skos:exactMatch	ncbitaxon	3435	Persea americana	lexical	0.7777777777777778	https://era.ccafs.cgiar.org/ontology/
+era		Avocado	skos:exactMatch	ncbitaxon	3435	Persea americana	lexical	0.5400948258091115	https://era.ccafs.cgiar.org/ontology/
+era		Stipagrostis uniplumis	skos:exactMatch	ncbitaxon	348286	Stipagrostis uniplumis	lexical	0.7777777777777778	https://era.ccafs.cgiar.org/ontology/
+era		Humulus lupulus	skos:exactMatch	ncbitaxon	3486	Humulus lupulus	lexical	0.7777777777777778	https://era.ccafs.cgiar.org/ontology/
+era		Swiss Chard	skos:exactMatch	ncbitaxon	3555	Beta vulgaris subsp. vulgaris	lexical	0.549371263656978	https://era.ccafs.cgiar.org/ontology/
+era		Sugar Beet	skos:exactMatch	ncbitaxon	3555	Beta vulgaris subsp. vulgaris	lexical	0.5400948258091115	https://era.ccafs.cgiar.org/ontology/
+era		Spinach	skos:exactMatch	ncbitaxon	3562	Spinacia oleracea	lexical	0.5400948258091115	https://era.ccafs.cgiar.org/ontology/
+era		Spinacia oleracea	skos:exactMatch	ncbitaxon	3562	Spinacia oleracea	lexical	0.7777777777777778	https://era.ccafs.cgiar.org/ontology/
+era		Cenchrus ciliaris	skos:exactMatch	ncbitaxon	35872	Cenchrus ciliaris	lexical	0.7777777777777778	https://era.ccafs.cgiar.org/ontology/
+era		Fagopyrum esculentum	skos:exactMatch	ncbitaxon	3617	Fagopyrum esculentum	lexical	0.7777777777777778	https://era.ccafs.cgiar.org/ontology/
+era		Trifolium quartinianum	skos:exactMatch	ncbitaxon	361975	Trifolium quartinianum	lexical	0.7777777777777778	https://era.ccafs.cgiar.org/ontology/
+era		Trifolium steudneri	skos:exactMatch	ncbitaxon	361988	Trifolium steudneri	lexical	0.7777777777777778	https://era.ccafs.cgiar.org/ontology/
+era		Kiwifruit	skos:exactMatch	ncbitaxon	3627	Actinidia deliciosa	lexical	0.5400948258091115	https://era.ccafs.cgiar.org/ontology/
+era		Cotton	skos:exactMatch	ncbitaxon	3635	Gossypium hirsutum	lexical	0.5400948258091115	https://era.ccafs.cgiar.org/ontology/
+era		Theobroma cacao	skos:exactMatch	ncbitaxon	3641	Theobroma cacao	lexical	0.7777777777777778	https://era.ccafs.cgiar.org/ontology/
+era		Brazil Nuts	skos:exactMatch	ncbitaxon	3645	Bertholletia excelsa	lexical	0.549371263656978	https://era.ccafs.cgiar.org/ontology/
+era		Bertholletia excelsa	skos:exactMatch	ncbitaxon	3645	Bertholletia excelsa	lexical	0.7777777777777778	https://era.ccafs.cgiar.org/ontology/
+era		Carica papaya	skos:exactMatch	ncbitaxon	3649	Carica papaya	lexical	0.7777777777777778	https://era.ccafs.cgiar.org/ontology/
+era		Citrullus lanatus	skos:exactMatch	ncbitaxon	3654	Citrullus lanatus	lexical	0.7777777777777778	https://era.ccafs.cgiar.org/ontology/
+era		Cucumis melo	skos:exactMatch	ncbitaxon	3656	Cucumis melo	lexical	0.7777777777777778	https://era.ccafs.cgiar.org/ontology/
+era		Cucumber	skos:exactMatch	ncbitaxon	3659	Cucumis sativus	lexical	0.5400948258091115	https://era.ccafs.cgiar.org/ontology/
+era		Cucumis sativus	skos:exactMatch	ncbitaxon	3659	Cucumis sativus	lexical	0.7777777777777778	https://era.ccafs.cgiar.org/ontology/
+era		Prunus armeniaca	skos:exactMatch	ncbitaxon	36596	Prunus armeniaca	lexical	0.7777777777777778	https://era.ccafs.cgiar.org/ontology/
+era		Apricot	skos:exactMatch	ncbitaxon	36596	Prunus armeniaca	lexical	0.5400948258091115	https://era.ccafs.cgiar.org/ontology/
+era		Cydonia oblonga	skos:exactMatch	ncbitaxon	36610	Cydonia oblonga	lexical	0.7777777777777778	https://era.ccafs.cgiar.org/ontology/
+era		Quince	skos:exactMatch	ncbitaxon	36610	Cydonia oblonga	lexical	0.5400948258091115	https://era.ccafs.cgiar.org/ontology/
+era		Cucurbita pepo	skos:exactMatch	ncbitaxon	3663	Cucurbita pepo	lexical	0.7777777777777778	https://era.ccafs.cgiar.org/ontology/
+era		Lagenaria siceraria	skos:exactMatch	ncbitaxon	3668	Lagenaria siceraria	lexical	0.7777777777777778	https://era.ccafs.cgiar.org/ontology/
+era		Bitter Melon	skos:exactMatch	ncbitaxon	3673	Momordica charantia	lexical	0.5400948258091115	https://era.ccafs.cgiar.org/ontology/
+era		Momordica charantia	skos:exactMatch	ncbitaxon	3673	Momordica charantia	lexical	0.7777777777777778	https://era.ccafs.cgiar.org/ontology/
+era		Brassica napus	skos:exactMatch	ncbitaxon	3708	Brassica napus	lexical	0.7777777777777778	https://era.ccafs.cgiar.org/ontology/
+era		Brassica rapa	skos:exactMatch	ncbitaxon	3711	Brassica rapa	lexical	0.7777777777777778	https://era.ccafs.cgiar.org/ontology/
+era		Brassica oleracea	skos:exactMatch	ncbitaxon	3712	Brassica oleracea	lexical	0.7777777777777778	https://era.ccafs.cgiar.org/ontology/
+era		Kale	skos:exactMatch	ncbitaxon	3713	Brassica oleracea var. viridis	lexical	0.5400948258091115	https://era.ccafs.cgiar.org/ontology/
+era		Cabbage	skos:exactMatch	ncbitaxon	3716	Brassica oleracea var. capitata	lexical	0.5400948258091115	https://era.ccafs.cgiar.org/ontology/
+era		Raphanus sativus	skos:exactMatch	ncbitaxon	3726	Raphanus sativus	lexical	0.7777777777777778	https://era.ccafs.cgiar.org/ontology/
+era		Moringa	skos:exactMatch	ncbitaxon	3734	Moringa	lexical	0.7777777777777778	https://era.ccafs.cgiar.org/ontology/
+era		Moringa oleifera	skos:exactMatch	ncbitaxon	3735	Moringa oleifera	lexical	0.7777777777777778	https://era.ccafs.cgiar.org/ontology/
+era		Manilkara zapota	skos:exactMatch	ncbitaxon	3741	Manilkara zapota	lexical	0.7777777777777778	https://era.ccafs.cgiar.org/ontology/
+era		Strawberry	skos:exactMatch	ncbitaxon	3747	Fragaria x ananassa	lexical	0.5400948258091115	https://era.ccafs.cgiar.org/ontology/
+era		Apple	skos:exactMatch	ncbitaxon	3750	Malus domestica	lexical	0.5400948258091115	https://era.ccafs.cgiar.org/ontology/
+era		Malus domestica	skos:exactMatch	ncbitaxon	3750	Malus domestica	lexical	0.7777777777777778	https://era.ccafs.cgiar.org/ontology/
+era		Almond	skos:exactMatch	ncbitaxon	3755	Prunus dulcis	lexical	0.5400948258091115	https://era.ccafs.cgiar.org/ontology/
+era		Plum	skos:exactMatch	ncbitaxon	3758	Prunus domestica	lexical	0.5400948258091115	https://era.ccafs.cgiar.org/ontology/
+era		Prunus persica	skos:exactMatch	ncbitaxon	3760	Prunus persica	lexical	0.7777777777777778	https://era.ccafs.cgiar.org/ontology/
+era		Stylosanthes hamata	skos:exactMatch	ncbitaxon	37660	Stylosanthes hamata	lexical	0.7777777777777778	https://era.ccafs.cgiar.org/ontology/
+era		Maize	skos:exactMatch	ncbitaxon	381124	Zea mays subsp. mays	lexical	0.5400948258091115	https://era.ccafs.cgiar.org/ontology/
+era		Pigeon Pea	skos:exactMatch	ncbitaxon	3821	Cajanus cajan	lexical	0.5400948258091115	https://era.ccafs.cgiar.org/ontology/
+era		Cajanus cajan	skos:exactMatch	ncbitaxon	3821	Cajanus cajan	lexical	0.7777777777777778	https://era.ccafs.cgiar.org/ontology/
+era		Jack Bean	skos:exactMatch	ncbitaxon	3823	Canavalia ensiformis	lexical	0.5400948258091115	https://era.ccafs.cgiar.org/ontology/
+era		Canavalia ensiformis	skos:exactMatch	ncbitaxon	3823	Canavalia ensiformis	lexical	0.7777777777777778	https://era.ccafs.cgiar.org/ontology/
+era		Cicer arietinum	skos:exactMatch	ncbitaxon	3827	Cicer arietinum	lexical	0.7777777777777778	https://era.ccafs.cgiar.org/ontology/
+era		Chickpea	skos:exactMatch	ncbitaxon	3827	Cicer arietinum	lexical	0.5400948258091115	https://era.ccafs.cgiar.org/ontology/
+era		Sunn Hemp	skos:exactMatch	ncbitaxon	3829	Crotalaria juncea	lexical	0.5400948258091115	https://era.ccafs.cgiar.org/ontology/
+era		Crotalaria juncea	skos:exactMatch	ncbitaxon	3829	Crotalaria juncea	lexical	0.7777777777777778	https://era.ccafs.cgiar.org/ontology/
+era		Cyamopsis tetragonoloba	skos:exactMatch	ncbitaxon	3832	Cyamopsis tetragonoloba	lexical	0.7777777777777778	https://era.ccafs.cgiar.org/ontology/
+era		Telfairia occidentalis	skos:exactMatch	ncbitaxon	383670	Telfairia occidentalis	lexical	0.7777777777777778	https://era.ccafs.cgiar.org/ontology/
+era		Soybean	skos:exactMatch	ncbitaxon	3847	Glycine max	lexical	0.5400948258091115	https://era.ccafs.cgiar.org/ontology/
+era		Glycine max	skos:exactMatch	ncbitaxon	3847	Glycine max	lexical	0.7777777777777778	https://era.ccafs.cgiar.org/ontology/
+era		Lathyrus sativus	skos:exactMatch	ncbitaxon	3860	Lathyrus sativus	lexical	0.7777777777777778	https://era.ccafs.cgiar.org/ontology/
+era		Lentil	skos:exactMatch	ncbitaxon	3864	Lens culinaris	lexical	0.5400948258091115	https://era.ccafs.cgiar.org/ontology/
+era		Lens culinaris	skos:exactMatch	ncbitaxon	3864	Lens culinaris	lexical	0.7777777777777778	https://era.ccafs.cgiar.org/ontology/
+era		Lupinus angustifolius	skos:exactMatch	ncbitaxon	3871	Lupinus angustifolius	lexical	0.7777777777777778	https://era.ccafs.cgiar.org/ontology/
+era		Medicago sativa	skos:exactMatch	ncbitaxon	3879	Medicago sativa	lexical	0.7777777777777778	https://era.ccafs.cgiar.org/ontology/
+era		Alfalfa	skos:exactMatch	ncbitaxon	3879	Medicago sativa	lexical	0.5400948258091115	https://era.ccafs.cgiar.org/ontology/
+era		Medicago truncatula	skos:exactMatch	ncbitaxon	3880	Medicago truncatula	lexical	0.7777777777777778	https://era.ccafs.cgiar.org/ontology/
+era		Phaseolus lunatus	skos:exactMatch	ncbitaxon	3884	Phaseolus lunatus	lexical	0.7777777777777778	https://era.ccafs.cgiar.org/ontology/
+era		Phaseolus vulgaris	skos:exactMatch	ncbitaxon	3885	Phaseolus vulgaris	lexical	0.7777777777777778	https://era.ccafs.cgiar.org/ontology/
+era		French Bean	skos:exactMatch	ncbitaxon	3885	Phaseolus vulgaris	lexical	0.549371263656978	https://era.ccafs.cgiar.org/ontology/
+era		Pisum sativum	skos:exactMatch	ncbitaxon	3888	Pisum sativum	lexical	0.7777777777777778	https://era.ccafs.cgiar.org/ontology/
+era		Peas	skos:exactMatch	ncbitaxon	3888	Pisum sativum	lexical	0.5400948258091115	https://era.ccafs.cgiar.org/ontology/
+era		Trifolium subterraneum	skos:exactMatch	ncbitaxon	3900	Trifolium subterraneum	lexical	0.7777777777777778	https://era.ccafs.cgiar.org/ontology/
+era		Vicia faba	skos:exactMatch	ncbitaxon	3906	Vicia faba	lexical	0.7777777777777778	https://era.ccafs.cgiar.org/ontology/
+era		Vicia villosa	skos:exactMatch	ncbitaxon	3911	Vicia villosa	lexical	0.7777777777777778	https://era.ccafs.cgiar.org/ontology/
+era		Vigna mungo	skos:exactMatch	ncbitaxon	3915	Vigna mungo	lexical	0.7777777777777778	https://era.ccafs.cgiar.org/ontology/
+era		Black Gram	skos:exactMatch	ncbitaxon	3915	Vigna mungo	lexical	0.5400948258091115	https://era.ccafs.cgiar.org/ontology/
+era		Cowpea	skos:exactMatch	ncbitaxon	3917	Vigna unguiculata	lexical	0.5400948258091115	https://era.ccafs.cgiar.org/ontology/
+era		Vigna unguiculata	skos:exactMatch	ncbitaxon	3917	Vigna unguiculata	lexical	0.7777777777777778	https://era.ccafs.cgiar.org/ontology/
+era		Eragrostis superba	skos:exactMatch	ncbitaxon	391786	Eragrostis superba	lexical	0.7777777777777778	https://era.ccafs.cgiar.org/ontology/
+era		Cowpea	skos:exactMatch	ncbitaxon	3920	Vigna unguiculata subsp. unguiculata	lexical	0.5400948258091115	https://era.ccafs.cgiar.org/ontology/
+era		Agave	skos:exactMatch	ncbitaxon	39509	Agave	lexical	0.7777777777777778	https://era.ccafs.cgiar.org/ontology/
+era		Hevea brasiliensis	skos:exactMatch	ncbitaxon	3981	Hevea brasiliensis	lexical	0.7777777777777778	https://era.ccafs.cgiar.org/ontology/
+era		Manihot esculenta	skos:exactMatch	ncbitaxon	3983	Manihot esculenta	lexical	0.7777777777777778	https://era.ccafs.cgiar.org/ontology/
+era		Ricinus communis	skos:exactMatch	ncbitaxon	3988	Ricinus communis	lexical	0.7777777777777778	https://era.ccafs.cgiar.org/ontology/
+era		Jojoba	skos:exactMatch	ncbitaxon	3999	Simmondsia chinensis	lexical	0.5400948258091115	https://era.ccafs.cgiar.org/ontology/
+era		Simmondsia chinensis	skos:exactMatch	ncbitaxon	3999	Simmondsia chinensis	lexical	0.7777777777777778	https://era.ccafs.cgiar.org/ontology/
+era		Flax	skos:exactMatch	ncbitaxon	4006	Linum usitatissimum	lexical	0.5400948258091115	https://era.ccafs.cgiar.org/ontology/
+era		Linum usitatissimum	skos:exactMatch	ncbitaxon	4006	Linum usitatissimum	lexical	0.7777777777777778	https://era.ccafs.cgiar.org/ontology/
+era		Apium graveolens	skos:exactMatch	ncbitaxon	4045	Apium graveolens	lexical	0.7777777777777778	https://era.ccafs.cgiar.org/ontology/
+era		Coriandrum sativum	skos:exactMatch	ncbitaxon	4047	Coriandrum sativum	lexical	0.7777777777777778	https://era.ccafs.cgiar.org/ontology/
+era		Capsicum annuum	skos:exactMatch	ncbitaxon	4072	Capsicum annuum	lexical	0.7777777777777778	https://era.ccafs.cgiar.org/ontology/
+era		Tomato	skos:exactMatch	ncbitaxon	4081	Solanum lycopersicum	lexical	0.5400948258091115	https://era.ccafs.cgiar.org/ontology/
+era		Solanum lycopersicum	skos:exactMatch	ncbitaxon	4081	Solanum lycopersicum	lexical	0.7777777777777778	https://era.ccafs.cgiar.org/ontology/
+era		Anise	skos:exactMatch	ncbitaxon	40880	Myrrhis odorata	lexical	0.5400948258091115	https://era.ccafs.cgiar.org/ontology/
+era		Anethum graveolens	skos:exactMatch	ncbitaxon	40922	Anethum graveolens	lexical	0.7777777777777778	https://era.ccafs.cgiar.org/ontology/
+era		Tobacco	skos:exactMatch	ncbitaxon	4097	Nicotiana tabacum	lexical	0.5400948258091115	https://era.ccafs.cgiar.org/ontology/
+era		Eggplant	skos:exactMatch	ncbitaxon	4111	Solanum melongena	lexical	0.5400948258091115	https://era.ccafs.cgiar.org/ontology/
+era		Solanum melongena	skos:exactMatch	ncbitaxon	4111	Solanum melongena	lexical	0.7777777777777778	https://era.ccafs.cgiar.org/ontology/
+era		Potato	skos:exactMatch	ncbitaxon	4113	Solanum tuberosum	lexical	0.5400948258091115	https://era.ccafs.cgiar.org/ontology/
+era		Solanum tuberosum	skos:exactMatch	ncbitaxon	4113	Solanum tuberosum	lexical	0.7777777777777778	https://era.ccafs.cgiar.org/ontology/
+era		Ipomoea batatas	skos:exactMatch	ncbitaxon	4120	Ipomoea batatas	lexical	0.7777777777777778	https://era.ccafs.cgiar.org/ontology/
+era		Sweet Potato	skos:exactMatch	ncbitaxon	4120	Ipomoea batatas	lexical	0.5400948258091115	https://era.ccafs.cgiar.org/ontology/
+era		Olea europaea	skos:exactMatch	ncbitaxon	4146	Olea europaea	lexical	0.7777777777777778	https://era.ccafs.cgiar.org/ontology/
+era		Sesamum indicum	skos:exactMatch	ncbitaxon	4182	Sesamum indicum	lexical	0.7777777777777778	https://era.ccafs.cgiar.org/ontology/
+era		Aristida congesta	skos:exactMatch	ncbitaxon	41982	Aristida congesta	lexical	0.7777777777777778	https://era.ccafs.cgiar.org/ontology/
+era		Carthamus tinctorius	skos:exactMatch	ncbitaxon	4222	Carthamus tinctorius	lexical	0.7777777777777778	https://era.ccafs.cgiar.org/ontology/
+era		Guizotia abyssinica	skos:exactMatch	ncbitaxon	4230	Guizotia abyssinica	lexical	0.7777777777777778	https://era.ccafs.cgiar.org/ontology/
+era		Niger Seed	skos:exactMatch	ncbitaxon	4230	Guizotia abyssinica	lexical	0.549371263656978	https://era.ccafs.cgiar.org/ontology/
+era		Helianthus annuus	skos:exactMatch	ncbitaxon	4232	Helianthus annuus	lexical	0.7777777777777778	https://era.ccafs.cgiar.org/ontology/
+era		Helianthus tuberosus	skos:exactMatch	ncbitaxon	4233	Helianthus tuberosus	lexical	0.7777777777777778	https://era.ccafs.cgiar.org/ontology/
+era		Phoenix dactylifera	skos:exactMatch	ncbitaxon	42345	Phoenix dactylifera	lexical	0.7777777777777778	https://era.ccafs.cgiar.org/ontology/
+era		Lactuca sativa	skos:exactMatch	ncbitaxon	4236	Lactuca sativa	lexical	0.7777777777777778	https://era.ccafs.cgiar.org/ontology/
+era		Cynara cardunculus	skos:exactMatch	ncbitaxon	4265	Cynara cardunculus	lexical	0.7777777777777778	https://era.ccafs.cgiar.org/ontology/
+era		Clitoria ternatea	skos:exactMatch	ncbitaxon	43366	Clitoria ternatea	lexical	0.7777777777777778	https://era.ccafs.cgiar.org/ontology/
+era		Sisal	skos:exactMatch	ncbitaxon	442491	Agave sisalana	lexical	0.5400948258091115	https://era.ccafs.cgiar.org/ontology/
+era		Agave sisalana	skos:exactMatch	ncbitaxon	442491	Agave sisalana	lexical	0.7777777777777778	https://era.ccafs.cgiar.org/ontology/
+era		Camellia sinensis	skos:exactMatch	ncbitaxon	4442	Camellia sinensis	lexical	0.7777777777777778	https://era.ccafs.cgiar.org/ontology/
+era		Colocasia esculenta	skos:exactMatch	ncbitaxon	4460	Colocasia esculenta	lexical	0.7777777777777778	https://era.ccafs.cgiar.org/ontology/
+era		Gnetum africanum	skos:exactMatch	ncbitaxon	44929	Gnetum africanum	lexical	0.7777777777777778	https://era.ccafs.cgiar.org/ontology/
+era		Oats	skos:exactMatch	ncbitaxon	4498	Avena sativa	lexical	0.5400948258091115	https://era.ccafs.cgiar.org/ontology/
+era		Avena sativa	skos:exactMatch	ncbitaxon	4498	Avena sativa	lexical	0.7777777777777778	https://era.ccafs.cgiar.org/ontology/
+era		Cocksfoot	skos:exactMatch	ncbitaxon	4509	Dactylis glomerata	lexical	0.5400948258091115	https://era.ccafs.cgiar.org/ontology/
+era		Dactylis glomerata	skos:exactMatch	ncbitaxon	4509	Dactylis glomerata	lexical	0.7777777777777778	https://era.ccafs.cgiar.org/ontology/
+era		Finger Millet	skos:exactMatch	ncbitaxon	4511	Eleusine coracana	lexical	0.5400948258091115	https://era.ccafs.cgiar.org/ontology/
+era		Hordeum vulgare	skos:exactMatch	ncbitaxon	4513	Hordeum vulgare	lexical	0.7777777777777778	https://era.ccafs.cgiar.org/ontology/
+era		Barley	skos:exactMatch	ncbitaxon	4513	Hordeum vulgare	lexical	0.5400948258091115	https://era.ccafs.cgiar.org/ontology/
+era		Oryza sativa	skos:exactMatch	ncbitaxon	4530	Oryza sativa	lexical	0.7777777777777778	https://era.ccafs.cgiar.org/ontology/
+era		Rice	skos:exactMatch	ncbitaxon	4530	Oryza sativa	lexical	0.5400948258091115	https://era.ccafs.cgiar.org/ontology/
+era		Pearl Millet	skos:exactMatch	ncbitaxon	4543	Cenchrus americanus	lexical	0.5400948258091115	https://era.ccafs.cgiar.org/ontology/
+era		Pennisetum glaucum	skos:exactMatch	ncbitaxon	4543	Cenchrus americanus	lexical	0.5555555555555556	https://era.ccafs.cgiar.org/ontology/
+era		Saccharum officinarum	skos:exactMatch	ncbitaxon	4547	Saccharum officinarum	lexical	0.7777777777777778	https://era.ccafs.cgiar.org/ontology/
+era		Secale cereale	skos:exactMatch	ncbitaxon	4550	Secale cereale	lexical	0.7777777777777778	https://era.ccafs.cgiar.org/ontology/
+era		Rye	skos:exactMatch	ncbitaxon	4550	Secale cereale	lexical	0.5400948258091115	https://era.ccafs.cgiar.org/ontology/
+era		Abelmoschus esculentus	skos:exactMatch	ncbitaxon	455045	Abelmoschus esculentus	lexical	0.7777777777777778	https://era.ccafs.cgiar.org/ontology/
+era		Okra	skos:exactMatch	ncbitaxon	455045	Abelmoschus esculentus	lexical	0.5400948258091115	https://era.ccafs.cgiar.org/ontology/
+era		Sorghum	skos:exactMatch	ncbitaxon	4557	Sorghum	lexical	0.7777777777777778	https://era.ccafs.cgiar.org/ontology/
+era		Sorghum bicolor	skos:exactMatch	ncbitaxon	4558	Sorghum bicolor	lexical	0.7777777777777778	https://era.ccafs.cgiar.org/ontology/
+era		Sorghum	skos:exactMatch	ncbitaxon	4558	Sorghum bicolor	lexical	0.5400948258091115	https://era.ccafs.cgiar.org/ontology/
+era		Triticum aestivum	skos:exactMatch	ncbitaxon	4565	Triticum aestivum	lexical	0.7777777777777778	https://era.ccafs.cgiar.org/ontology/
+era		Wheat	skos:exactMatch	ncbitaxon	4565	Triticum aestivum	lexical	0.5400948258091115	https://era.ccafs.cgiar.org/ontology/
+era		Durum Wheat	skos:exactMatch	ncbitaxon	4567	Triticum turgidum subsp. durum	lexical	0.5400948258091115	https://era.ccafs.cgiar.org/ontology/
+era		Triticum durum	skos:exactMatch	ncbitaxon	4567	Triticum turgidum subsp. durum	lexical	0.5555555555555556	https://era.ccafs.cgiar.org/ontology/
+era		Maize	skos:exactMatch	ncbitaxon	4577	Zea mays	lexical	0.5400948258091115	https://era.ccafs.cgiar.org/ontology/
+era		Zea mays	skos:exactMatch	ncbitaxon	4577	Zea mays	lexical	0.7777777777777778	https://era.ccafs.cgiar.org/ontology/
+era		Festuca arundinacea	skos:exactMatch	ncbitaxon	4606	Lolium arundinaceum	lexical	0.5555555555555556	https://era.ccafs.cgiar.org/ontology/
+era		Tall Fescue	skos:exactMatch	ncbitaxon	4606	Lolium arundinaceum	lexical	0.5400948258091115	https://era.ccafs.cgiar.org/ontology/
+era		Portulaca oleracea	skos:exactMatch	ncbitaxon	46147	Portulaca oleracea	lexical	0.7777777777777778	https://era.ccafs.cgiar.org/ontology/
+era		Ananas comosus	skos:exactMatch	ncbitaxon	4615	Ananas comosus	lexical	0.7777777777777778	https://era.ccafs.cgiar.org/ontology/
+era		Pineapple	skos:exactMatch	ncbitaxon	4615	Ananas comosus	lexical	0.5400948258091115	https://era.ccafs.cgiar.org/ontology/
+era		Steirodiscus tagetes	skos:exactMatch	ncbitaxon	462574	Steirodiscus tagetes	lexical	0.7777777777777778	https://era.ccafs.cgiar.org/ontology/
+era		Allium cepa	skos:exactMatch	ncbitaxon	4679	Allium cepa	lexical	0.7777777777777778	https://era.ccafs.cgiar.org/ontology/
+era		Allium ampeloprasum	skos:exactMatch	ncbitaxon	4681	Allium ampeloprasum	lexical	0.7777777777777778	https://era.ccafs.cgiar.org/ontology/
+era		Leeks	skos:exactMatch	ncbitaxon	4681	Allium ampeloprasum	lexical	0.5400948258091115	https://era.ccafs.cgiar.org/ontology/
+era		Garlic	skos:exactMatch	ncbitaxon	4682	Allium sativum	lexical	0.5400948258091115	https://era.ccafs.cgiar.org/ontology/
+era		Allium sativum	skos:exactMatch	ncbitaxon	4682	Allium sativum	lexical	0.7777777777777778	https://era.ccafs.cgiar.org/ontology/
+era		Asparagus	skos:exactMatch	ncbitaxon	4685	Asparagus	lexical	0.7777777777777778	https://era.ccafs.cgiar.org/ontology/
+era		Asparagus officinalis	skos:exactMatch	ncbitaxon	4686	Asparagus officinalis	lexical	0.7777777777777778	https://era.ccafs.cgiar.org/ontology/
+era		Lessertia frutescens	skos:exactMatch	ncbitaxon	47091	Lessertia frutescens	lexical	0.7777777777777778	https://era.ccafs.cgiar.org/ontology/
+era		Triticale	skos:exactMatch	ncbitaxon	49317	x Triticosecale	lexical	0.5400948258091115	https://era.ccafs.cgiar.org/ontology/
+era		Coffea canephora	skos:exactMatch	ncbitaxon	49390	Coffea canephora	lexical	0.7777777777777778	https://era.ccafs.cgiar.org/ontology/
+era		Felicia heterophylla	skos:exactMatch	ncbitaxon	496625	Felicia heterophylla	lexical	0.7777777777777778	https://era.ccafs.cgiar.org/ontology/
+era		Mimosa invisa	skos:exactMatch	ncbitaxon	499990	Mimosa invisa	lexical	0.7777777777777778	https://era.ccafs.cgiar.org/ontology/
+era		Saccharum arundinaceum	skos:exactMatch	ncbitaxon	50346	Tripidium arundinaceum	lexical	0.5555555555555556	https://era.ccafs.cgiar.org/ontology/
+era		Oats	skos:exactMatch	ncbitaxon	50455	Avena sp.	lexical	0.5400948258091115	https://era.ccafs.cgiar.org/ontology/
+era		Myristica fragrans	skos:exactMatch	ncbitaxon	51089	Myristica fragrans	lexical	0.7777777777777778	https://era.ccafs.cgiar.org/ontology/
+era		Vanilla	skos:exactMatch	ncbitaxon	51238	Vanilla	lexical	0.7777777777777778	https://era.ccafs.cgiar.org/ontology/
+era		Turnip	skos:exactMatch	ncbitaxon	51350	Brassica rapa subsp. rapa	lexical	0.5400948258091115	https://era.ccafs.cgiar.org/ontology/
+era		Elaeis guineensis	skos:exactMatch	ncbitaxon	51953	Elaeis guineensis	lexical	0.7777777777777778	https://era.ccafs.cgiar.org/ontology/
+era		Cuminum cyminum	skos:exactMatch	ncbitaxon	52462	Cuminum cyminum	lexical	0.7777777777777778	https://era.ccafs.cgiar.org/ontology/
+era		Cumin	skos:exactMatch	ncbitaxon	52462	Cuminum cyminum	lexical	0.5400948258091115	https://era.ccafs.cgiar.org/ontology/
+era		Senecio elegans	skos:exactMatch	ncbitaxon	545667	Senecio elegans	lexical	0.7777777777777778	https://era.ccafs.cgiar.org/ontology/
+era		Aeschynomene afraspera	skos:exactMatch	ncbitaxon	552031	Aeschynomene afraspera	lexical	0.7777777777777778	https://era.ccafs.cgiar.org/ontology/
+era		Pistacia vera	skos:exactMatch	ncbitaxon	55513	Pistacia vera	lexical	0.7777777777777778	https://era.ccafs.cgiar.org/ontology/
+era		Yam	skos:exactMatch	ncbitaxon	55571	Dioscorea alata	lexical	0.5400948258091115	https://era.ccafs.cgiar.org/ontology/
+era		Stevia	skos:exactMatch	ncbitaxon	55669	Stevia	lexical	0.7777777777777778	https://era.ccafs.cgiar.org/ontology/
+era		Stevia rebaudiana	skos:exactMatch	ncbitaxon	55670	Stevia rebaudiana	lexical	0.7777777777777778	https://era.ccafs.cgiar.org/ontology/
+era		Aeschynomene histrix	skos:exactMatch	ncbitaxon	561487	Ctenodon histrix	lexical	0.5555555555555556	https://era.ccafs.cgiar.org/ontology/
+era		Gazania krebsiana	skos:exactMatch	ncbitaxon	56526	Gazania krebsiana	lexical	0.7777777777777778	https://era.ccafs.cgiar.org/ontology/
+era		Garcinia mangostana	skos:exactMatch	ncbitaxon	58228	Garcinia mangostana	lexical	0.7777777777777778	https://era.ccafs.cgiar.org/ontology/
+era		Mangosteen	skos:exactMatch	ncbitaxon	58228	Garcinia mangostana	lexical	0.5400948258091115	https://era.ccafs.cgiar.org/ontology/
+era		Tamarindus indica	skos:exactMatch	ncbitaxon	58860	Tamarindus indica	lexical	0.7777777777777778	https://era.ccafs.cgiar.org/ontology/
+era		Tamarind	skos:exactMatch	ncbitaxon	58860	Tamarindus indica	lexical	0.5400948258091115	https://era.ccafs.cgiar.org/ontology/
+era		Megathyrsus maximus	skos:exactMatch	ncbitaxon	59788	Megathyrsus maximus	lexical	0.7777777777777778	https://era.ccafs.cgiar.org/ontology/
+era		Guinea Grass	skos:exactMatch	ncbitaxon	59788	Megathyrsus maximus	lexical	0.549371263656978	https://era.ccafs.cgiar.org/ontology/
+era		Artichoke	skos:exactMatch	ncbitaxon	59895	Cynara cardunculus var. scolymus	lexical	0.5400948258091115	https://era.ccafs.cgiar.org/ontology/
+era		Stylosanthes guianensis	skos:exactMatch	ncbitaxon	62615	Stylosanthes guianensis	lexical	0.7777777777777778	https://era.ccafs.cgiar.org/ontology/
+era		Chenopodium quinoa	skos:exactMatch	ncbitaxon	63459	Chenopodium quinoa	lexical	0.7777777777777778	https://era.ccafs.cgiar.org/ontology/
+era		Quinoa	skos:exactMatch	ncbitaxon	63459	Chenopodium quinoa	lexical	0.5400948258091115	https://era.ccafs.cgiar.org/ontology/
+era		Digitaria eriantha	skos:exactMatch	ncbitaxon	661175	Digitaria eriantha	lexical	0.7777777777777778	https://era.ccafs.cgiar.org/ontology/
+era		Vaccinium corymbosum	skos:exactMatch	ncbitaxon	69266	Vaccinium corymbosum	lexical	0.7777777777777778	https://era.ccafs.cgiar.org/ontology/
+era		Pinus patula	skos:exactMatch	ncbitaxon	71645	Pinus patula	lexical	0.7777777777777778	https://era.ccafs.cgiar.org/ontology/
+era		Vernicia fordii	skos:exactMatch	ncbitaxon	73154	Vernicia fordii	lexical	0.7777777777777778	https://era.ccafs.cgiar.org/ontology/
+era		Tripneustes gratilla	skos:exactMatch	ncbitaxon	7673	Tripneustes gratilla	lexical	0.7777777777777778	https://era.ccafs.cgiar.org/ontology/
+era		Fish	skos:exactMatch	ncbitaxon	7777	Chondrichthyes	lexical	0.5400948258091115	https://era.ccafs.cgiar.org/ontology/
+era		Passiflora edulis	skos:exactMatch	ncbitaxon	78168	Passiflora edulis	lexical	0.7777777777777778	https://era.ccafs.cgiar.org/ontology/
+era		Fish	skos:exactMatch	ncbitaxon	7878	Dipnomorpha	lexical	0.5400948258091115	https://era.ccafs.cgiar.org/ontology/
+era		Fish	skos:exactMatch	ncbitaxon	7898	Actinopterygii	lexical	0.5400948258091115	https://era.ccafs.cgiar.org/ontology/
+era		Boehmeria nivea	skos:exactMatch	ncbitaxon	83906	Boehmeria nivea	lexical	0.7777777777777778	https://era.ccafs.cgiar.org/ontology/
+era		Ramie	skos:exactMatch	ncbitaxon	83906	Boehmeria nivea	lexical	0.5400948258091115	https://era.ccafs.cgiar.org/ontology/
+era		Cucumber	skos:exactMatch	ncbitaxon	869827	Cucumis sativus var. sativus	lexical	0.5400948258091115	https://era.ccafs.cgiar.org/ontology/
+era		Rice Bean	skos:exactMatch	ncbitaxon	87088	Vigna umbellata	lexical	0.5400948258091115	https://era.ccafs.cgiar.org/ontology/
+era		Vigna umbellata	skos:exactMatch	ncbitaxon	87088	Vigna umbellata	lexical	0.7777777777777778	https://era.ccafs.cgiar.org/ontology/
+era		Struthio camelus	skos:exactMatch	ncbitaxon	8801	Struthio camelus	lexical	0.7777777777777778	https://era.ccafs.cgiar.org/ontology/
+era		Ostrich	skos:exactMatch	ncbitaxon	8801	Struthio camelus	lexical	0.5400948258091115	https://era.ccafs.cgiar.org/ontology/
+era		Duck	skos:exactMatch	ncbitaxon	8839	Anas platyrhynchos	lexical	0.5400948258091115	https://era.ccafs.cgiar.org/ontology/
+era		Geese	skos:exactMatch	ncbitaxon	8842	Anser	lexical	0.5400948258091115	https://era.ccafs.cgiar.org/ontology/
+era		Anser anser domesticus	skos:exactMatch	ncbitaxon	8848	Anser anser domesticus	lexical	0.7777777777777778	https://era.ccafs.cgiar.org/ontology/
+era		Bubalus bubalis	skos:exactMatch	ncbitaxon	89462	Bubalus bubalis	lexical	0.7777777777777778	https://era.ccafs.cgiar.org/ontology/
+era		Numida meleagris	skos:exactMatch	ncbitaxon	8996	Numida meleagris	lexical	0.7777777777777778	https://era.ccafs.cgiar.org/ontology/
+era		Gallus gallus domesticus	skos:exactMatch	ncbitaxon	9031	Gallus gallus	lexical	0.5555555555555556	https://era.ccafs.cgiar.org/ontology/
+era		Cleretum bellidiforme	skos:exactMatch	ncbitaxon	90527	Cleretum bellidiforme	lexical	0.7777777777777778	https://era.ccafs.cgiar.org/ontology/
+era		Turkey	skos:exactMatch	ncbitaxon	9103	Meleagris gallopavo	lexical	0.5400948258091115	https://era.ccafs.cgiar.org/ontology/
+era		Meleagris gallopavo	skos:exactMatch	ncbitaxon	9103	Meleagris gallopavo	lexical	0.7777777777777778	https://era.ccafs.cgiar.org/ontology/
+era		Corchorus olitorius	skos:exactMatch	ncbitaxon	93759	Corchorus olitorius	lexical	0.7777777777777778	https://era.ccafs.cgiar.org/ontology/
+era		Japanese Quail	skos:exactMatch	ncbitaxon	93934	Coturnix japonica	lexical	0.549371263656978	https://era.ccafs.cgiar.org/ontology/
+era		Zingiber officinale	skos:exactMatch	ncbitaxon	94328	Zingiber officinale	lexical	0.7777777777777778	https://era.ccafs.cgiar.org/ontology/
+era		Ginger	skos:exactMatch	ncbitaxon	94328	Zingiber officinale	lexical	0.5400948258091115	https://era.ccafs.cgiar.org/ontology/
+era		Trifolium alexandrinum	skos:exactMatch	ncbitaxon	97006	Trifolium alexandrinum	lexical	0.7777777777777778	https://era.ccafs.cgiar.org/ontology/
+era		Equine	skos:exactMatch	ncbitaxon	9796	Equus caballus	lexical	0.5400948258091115	https://era.ccafs.cgiar.org/ontology/
+era		Horse	skos:exactMatch	ncbitaxon	9796	Equus caballus	lexical	0.5400948258091115	https://era.ccafs.cgiar.org/ontology/
+era		Pig	skos:exactMatch	ncbitaxon	9823	Sus scrofa	lexical	0.5400948258091115	https://era.ccafs.cgiar.org/ontology/
+era		Sus scrofa domesticus	skos:exactMatch	ncbitaxon	9825	Sus scrofa domesticus	lexical	0.7777777777777778	https://era.ccafs.cgiar.org/ontology/
+era		Camelus dromedarius	skos:exactMatch	ncbitaxon	9838	Camelus dromedarius	lexical	0.7777777777777778	https://era.ccafs.cgiar.org/ontology/
+era		Bovine	skos:exactMatch	ncbitaxon	9913	Bos taurus	lexical	0.5400948258091115	https://era.ccafs.cgiar.org/ontology/
+era		Capra aegagrus hircus	skos:exactMatch	ncbitaxon	9925	Capra hircus	lexical	0.5555555555555556	https://era.ccafs.cgiar.org/ontology/
+era		Ovis aries	skos:exactMatch	ncbitaxon	9940	Ovis aries	lexical	0.7777777777777778	https://era.ccafs.cgiar.org/ontology/
+era		Rabbit	skos:exactMatch	ncbitaxon	9986	Oryctolagus cuniculus	lexical	0.5400948258091115	https://era.ccafs.cgiar.org/ontology/
+era		Rodent	skos:exactMatch	ncbitaxon	9989	Rodentia	lexical	0.5400948258091115	https://era.ccafs.cgiar.org/ontology/
