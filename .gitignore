@@ -131,3 +131,7 @@ dmypy.json
 scratch/
 .DS_Store
 *.ipynb
+scripts/csv-import/WLE list of variables.csv
+scripts/csv-import/Ontologias_Bitacora Agronomica_ols_croponlology (_julio2021).csv
+scripts/csv-import/APNI-CropList0002.csv
+agrovoc_sparql_query.csv
