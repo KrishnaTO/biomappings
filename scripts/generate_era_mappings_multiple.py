@@ -34,9 +34,10 @@ SELECT distinct ?id ?label {
 """
 
 def main():
-    TARGET_ONTOLOGIES = ["AGRO", "ENVO", "CHEBI", "FOODON", "PATO", "PO", "TO", "UO", "GO", "PECO"]
+    TARGET_ONTOLOGIES = ["AGRO", "ENVO", "CHEBI", "PATO", "PO", "TO", "UO", "PECO"] # TODO Issues: FOODON, GO
     for ONT in TARGET_ONTOLOGIES:
         grounder = get_grounder(ONT)
+        print(f"Getting predictions for {ONT}")
         provenance = "https://era.ccafs.cgiar.org/ontology/"
         rows = []
         for identifier, name in tqdm(g.query(QUERY)):
@@ -56,7 +57,7 @@ def main():
                     )
                 )
         append_prediction_tuples(rows)
-
+    print("===Completed!===")
 
 if __name__ == "__main__":
     main()
