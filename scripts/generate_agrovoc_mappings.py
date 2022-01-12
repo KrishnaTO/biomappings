@@ -15,6 +15,10 @@ from biomappings import PredictionTuple
 from biomappings.resources import append_prediction_tuples
 from biomappings.utils import get_script_url
 
+from rdflib import Graph, Literal, Namespace
+import pandas as pd
+from rdflib.namespace import RDFS
+
 import csv
 
 AGROVOC_VERSION = "2021-12-02"
@@ -27,12 +31,6 @@ SELECT distinct ?id ?label {
     BIND(strafter(str(?term), "_") as ?id)
 }
 """
-# TODO include additional ns labels from agrovoc in QUERY, per list in ../agrovoc-ns.csv, to ~/.local/lib/python3.8/site-packages/pyobo/sources
-# Added:
-#     graph.bind("owl", OWL)
-#     graph.bind("rdfs-schema", RDFS)
-#     graph.bind("foaf", FOAF)
-# Result: no change
 
 def main():
     """Generate mappings from AGRO to AGROVOC."""
