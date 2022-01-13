@@ -28,7 +28,12 @@ def create_csv_graph(file_csv, csv_ns) -> Graph:
 
 csv_prj = "ERA"
 csv_ns = "https://era.ccafs.cgiar.org/ontology/ERA_"
+provenance = csv_ns
 file_csv = "/home/agar2/Documents/1Projects/7WorkProjects/2Projects/ERA/ttl-terms-export-v2.csv"
+TARGET_ONTOLOGIES = ["AGRO", "ENVO", "NCBITAXON", 
+                     "CHEBI", "PATO", "PO", 
+                     "TO", "UO", "PECO"] 
+                    # TODO Issues: FOODON, GO
 QUERY = """
 SELECT distinct ?id ?label {
     ?term rdfs:label ?label .
@@ -37,31 +42,29 @@ SELECT distinct ?id ?label {
 
 def main():
     f"""Generate mappings from {csv_prj} to AGRO."""
-    provenance = get_script_url(__file__)
-    grounder = get_grounder("AGRO")
-    print("got grounder for AGRO", grounder)
-    t = time.time()
-
     graph = create_csv_graph(file_csv, csv_ns)
-    rows = []
-
-    for identifier, name in tqdm(graph.query(QUERY)):
-        for scored_match in grounder.ground(name):
-            rows.append(
-                PredictionTuple(
-                    csv_prj,
-                    identifier,
-                    name,
-                    "skos:exactMatch",
-                    scored_match.term.db.lower(),
-                    scored_match.term.id,
-                    scored_match.term.entry_name,
-                    "lexical",
-                    scored_match.score,
-                    provenance,
+    for ONT in TARGET_ONTOLOGIES:
+        print(f"Getting predictions for {ONT}")
+        grounder = get_grounder(ONT)
+        rows = []
+        for identifier, name in tqdm(graph.query(QUERY)):
+            for scored_match in grounder.ground(name):
+                rows.append(
+                    PredictionTuple(
+                        csv_prj,
+                        identifier,
+                        name,
+                        "skos:exactMatch",
+                        scored_match.term.db.lower(),
+                        scored_match.term.id,
+                        scored_match.term.entry_name,
+                        "lexical",
+                        scored_match.score,
+                        provenance
+                    )
                 )
-            )
-    append_prediction_tuples(rows)
+        append_prediction_tuples(rows)
+    print("===Completed!===")
 
 
 if __name__ == "__main__":
