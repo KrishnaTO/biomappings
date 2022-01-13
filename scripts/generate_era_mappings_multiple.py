@@ -34,7 +34,7 @@ SELECT distinct ?id ?label {
 """
 
 def main():
-    TARGET_ONTOLOGIES = ["AGRO", "ENVO", "CHEBI", "PATO", "PO", "TO", "UO", "PECO"] # TODO Issues: FOODON, GO
+    TARGET_ONTOLOGIES = ["AGRO", "ENVO", "NCBITAXON", "CHEBI", "PATO", "PO", "TO", "UO", "PECO"] # TODO Issues: FOODON, GO
     for ONT in TARGET_ONTOLOGIES:
         grounder = get_grounder(ONT)
         print(f"Getting predictions for {ONT}")
