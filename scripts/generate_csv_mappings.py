@@ -38,7 +38,7 @@ def main():
     print("got grounder for AGRO", grounder)
     t = time.time()
 
-    graph = create_csv_graph
+    graph = create_csv_graph()
     rows = []
 
     for identifier, name in tqdm(graph.query(QUERY)):
