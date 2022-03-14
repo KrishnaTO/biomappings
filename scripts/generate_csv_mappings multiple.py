@@ -37,6 +37,8 @@ TARGET_ONTOLOGIES = ["AGRO", "ENVO", "NCBITAXON",
 QUERY = """
 SELECT distinct ?id ?label {
     ?term rdfs:label ?label .
+    FILTER (strStarts(str(?term), "https://era.ccafs.cgiar.org/ontology/ERA_")) .
+    BIND(strafter(str(?term), "_") as ?id)
 }
 """
 

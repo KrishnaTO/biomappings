@@ -32,6 +32,8 @@ file_csv = "/home/agar2/Documents/1Projects/7WorkProjects/2Projects/ERA/ttl-term
 QUERY = """
 SELECT distinct ?id ?label {
     ?term rdfs:label ?label .
+    FILTER (strStarts(str(?term), "https://era.ccafs.cgiar.org/ontology/ERA_")) .
+    BIND(strafter(str(?term), "_") as ?id)
 }
 """
 
