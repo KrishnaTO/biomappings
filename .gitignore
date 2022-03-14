@@ -130,3 +130,5 @@ dmypy.json
 
 scratch/
 .DS_Store
+csv-import-data
+zooma-report
