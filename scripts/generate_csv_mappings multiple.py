@@ -15,36 +15,46 @@ from rdflib import Graph, Literal, Namespace
 import pandas as pd
 from rdflib.namespace import RDFS
 
-def create_csv_graph(file_csv, csv_ns) -> Graph:
-    csv = pd.read_csv(file_csv)
+#############
+## Update Variables here
+#############
+
+csv_prj = "RAND"
+csv_ns = "URL_Namespace_example"
+provenance = csv_ns
+file_csv = "/home/agar2/Documents/1Projects/7WorkProjects/NER/yake-tokens.csv"
+col_num = 0                                     # Change to terms column number in csv file 
+TARGET_ONTOLOGIES = ["AGRO", "ENVO", "PATO", "PO", 
+                     "NCBITAXON", "CHEBI",      # large ontologies; comment out if not needed
+                     "TO", "UO", "PECO", 
+                    # TODO Issues: FOODON, GO
+                    ]
+#############
+
+def create_csv_graph(file_csv, csv_ns, col_num=0) -> Graph:
+    csv = pd.read_csv(file_csv, usecols=[col_num], header=None)
     csv_ns = csv_ns
     graph = Graph()
     graph.bind("rdfs-schema", RDFS)
-    for index, entity in zip(range(0,len(csv)), csv.Entity):
+    for index, entity in zip(range(0,len(csv)), csv):
         graph.add((Namespace.term(csv_ns, str(index)), 
                    RDFS.label, 
                    Literal(entity)))
     return graph
 
-csv_prj = "ERA"
-csv_ns = "https://era.ccafs.cgiar.org/ontology/ERA_"
-provenance = csv_ns
-file_csv = "/home/agar2/Documents/1Projects/7WorkProjects/2Projects/ERA/ttl-terms-export-v2.csv"
-TARGET_ONTOLOGIES = ["AGRO", "ENVO", "NCBITAXON", 
-                     "CHEBI", "PATO", "PO", 
-                     "TO", "UO", "PECO"] 
-                    # TODO Issues: FOODON, GO
-QUERY = """
-SELECT distinct ?id ?label {
-    ?term rdfs:label ?label .
-    FILTER (strStarts(str(?term), "https://era.ccafs.cgiar.org/ontology/ERA_")) .
-    BIND(strafter(str(?term), "_") as ?id)
-}
-"""
+## Changed QUERY to multiline (variable update)
+QUERY = (
+f"{'SELECT distinct ?id ?label {'} \n"
+    f"?term rdfs:label ?label . \n"
+    f'FILTER (strStarts(str(?term), "{csv_ns}")) . \n'
+    f'BIND(strafter(str(?term), "_") as ?id) \n'
+f"{'}'}")
+
+#############
 
 def main():
     f"""Generate mappings from {csv_prj} to AGRO."""
-    graph = create_csv_graph(file_csv, csv_ns)
+    graph = create_csv_graph(file_csv, csv_ns, col_num)
     for ONT in TARGET_ONTOLOGIES:
         print(f"Getting predictions for {ONT}")
         grounder = get_grounder(ONT)
