@@ -23,10 +23,11 @@ from rdflib.namespace import RDFS
 csv_prj = "RAND"
 csv_ns = "URL_Namespace_example"
 provenance = csv_ns
-file_csv = "/home/agar2/Documents/1Projects/7WorkProjects/NER/yake-tokens.csv"
-col_num = 0                                     # Change to terms column number in csv file 
+file_csv = "/home/agar2/Documents/1Projects/7WorkProjects/biomappings/agrovoc_sparql_query.csv"
+#file_csv = "/home/agar2/Documents/1Projects/7WorkProjects/NER/yake-tokens.csv"
+col_num = 1                                     # Change to terms column number in csv file 
 TARGET_ONTOLOGIES = ["AGRO", "ENVO", "PATO", "PO", 
-                     "NCBITAXON", "CHEBI",      # large ontologies; comment out if not needed
+                     #"NCBITAXON", "CHEBI",      # large ontologies; comment out if not needed
                      "TO", "UO", "PECO", 
                     # TODO Issues: FOODON, GO
                     ]
