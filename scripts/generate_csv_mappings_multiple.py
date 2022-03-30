@@ -22,7 +22,7 @@ from rdflib.namespace import RDFS
 csv_prj = "RAND"
 csv_ns = "URL_Namespace_example"
 provenance = csv_ns
-file_csv = "/home/agar2/Documents/1Projects/7WorkProjects/NER/yake-tokens.csv"
+file_csv = "/home/agar3/Documents/1Projects/6Projects/NER/yake-tokens.csv"
 col_num = 0                                     # Change to terms column number in csv file 
 TARGET_ONTOLOGIES = ["AGRO", "ENVO", "PATO", "PO", 
                      "NCBITAXON", "CHEBI",      # large ontologies; comment out if not needed

@@ -12,4 +12,7 @@ else
 fi
 
 # Run script
-su $USER -m -c "echo $PWD; $LOCAL_PY scripts/generate_csv_mappings_multiple.py"
+## Potential error: **permission required** sudo root with writing results to predictions.tsv
+## source: src/biomappings/resources/__init__.py : _write_helper
+## Suggested fix: restart to confirm file is closed
+su $USER -c "echo $PWD; $LOCAL_PY scripts/generate_csv_mappings_multiple.py"
