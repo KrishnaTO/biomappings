@@ -1,3 +1,9 @@
+
+### 1) 1 file compared with many ontologies
+### 2) many ontologies compared with many ontologies
+
+
+
 from tqdm import tqdm
 from pyobo.gilda_utils import get_grounder
 from biomappings import PredictionTuple
@@ -5,46 +11,66 @@ from biomappings.resources import append_prediction_tuples
 from rdflib.namespace import _RDFS, _SKOS, _OWL, _XSD, _DCTERMS
 from rdflib import Graph
 
+from os.path import exists
 
 __all__ = [
-    "ensure_era_graph",
+    "ensure_graph",   
 ]
 
-def ensure_era_graph() -> Graph:
+# Use bioregistry to get the ontology URL and abbreviation
+ONT_URL_PATH = "http://purl.obolibrary.org/obo/doid.owl"
+ONT_ABR = "doid"
+
+TARGET_ONTOLOGIES = ["AGRO", "ENVO", "NCBITAXON", "CHEBI", "PATO", "PO", "TO", "UO", "PECO"] # TODO Issues: FOODON, GO
+
+
+def choose_fmt(string):
+    strsplit = string.split(".")[-1]
+    if strsplit == "ttl":
+        return "turtle"
+    if strsplit == "rdf" or strsplit == "owl":
+        return "xml"
+    if strsplit == "nt":
+        return "nt"
+    if strsplit == "n3":
+        return "n3"
+    if strsplit == "jsonld":
+        return "json-ld"
+
+ONT_FORMAT = choose_fmt(ONT_URL_PATH)
+
+def ensure_graph() -> Graph:  
     g = Graph()
-    g.parse("/home/agar2/Documents/1Projects/6Projects/0Archive/AgrOCurator/2Datasets/ERA/era_kos.ttl", format='turtle')
+    g.parse(ONT_URL_PATH, format= ONT_FORMAT)
     g.bind("skos", _SKOS)
     g.bind("dcterms", _DCTERMS)
     g.bind("rdfs-schema", _RDFS)
     g.bind("owl", _OWL)
     g.bind("xsd", _XSD)
-    g.bind("era", "https://era.ccafs.cgiar.org/ontology/")
+    g.bind(ONT_ABR, ONT_URL_PATH)
     return g
-
-g = ensure_era_graph()
-
+g = ensure_graph() 
 
 QUERY = """
 SELECT distinct ?id ?label {
     ?term rdfs:label ?label .
     OPTIONAL { ?term skos:scopeNote ?description } .
-    FILTER (strStarts(str(?term), "https://era.ccafs.cgiar.org/ontology/")) .
+    FILTER (strStarts(str(?term), \"""" + ONT_URL_PATH + """\")) .
     BIND(strafter(str(?term), "_") as ?id)
 }
 """
 
 def main():
-    TARGET_ONTOLOGIES = ["AGRO", "ENVO", "NCBITAXON", "CHEBI", "PATO", "PO", "TO", "UO", "PECO"] # TODO Issues: FOODON, GO
     for ONT in TARGET_ONTOLOGIES:
         grounder = get_grounder(ONT)
         print(f"Getting predictions for {ONT}")
-        provenance = "https://era.ccafs.cgiar.org/ontology/"
+        provenance = ONT_URL_PATH
         rows = []
         for identifier, name in tqdm(g.query(QUERY)):
             for scored_match in grounder.ground(name):
                 rows.append(
                     PredictionTuple(
-                        "era",
+                        ONT_ABR,
                         identifier,
                         name,
                         "skos:exactMatch",
