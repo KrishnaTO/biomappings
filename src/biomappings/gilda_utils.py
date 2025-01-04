@@ -1,19 +1,28 @@
-# -*- coding: utf-8 -*-
-
 """Utilities for generating predictions with pyobo/gilda."""
 
 import logging
-from typing import Iterable, Mapping, Optional, Tuple, Union
+from collections import defaultdict
+from collections.abc import Iterable
+from pathlib import Path
+from typing import Optional, Union
 
+import bioregistry
+import pyobo
+import pyobo.gilda_utils
 from gilda.grounder import Grounder
-from pyobo import get_xref
-from pyobo.gilda_utils import get_grounder, iter_gilda_prediction_tuples
 
 from biomappings.resources import PredictionTuple, append_prediction_tuples
+from biomappings.utils import CMapping
+
+__all__ = [
+    "append_gilda_predictions",
+    "filter_custom",
+    "filter_existing_xrefs",
+    "has_mapping",
+    "iter_prediction_tuples",
+]
 
 logger = logging.getLogger(__name__)
-
-CMapping = Mapping[str, Mapping[str, Mapping[str, str]]]
 
 
 def append_gilda_predictions(
@@ -25,6 +34,7 @@ def append_gilda_predictions(
     custom_filter: Optional[CMapping] = None,
     unnamed: Optional[Iterable[str]] = None,
     identifiers_are_names: bool = False,
+    path: Optional[Path] = None,
 ) -> None:
     """Add gilda predictions to the Biomappings predictions.tsv file.
 
@@ -36,8 +46,11 @@ def append_gilda_predictions(
         Any source prefix, target prefix, source id combinations in this dictionary will be filtered.
     :param unnamed: An optional list of prefixes whose identifiers should be considered as names (e.g., CCLE, FPLX)
     :param identifiers_are_names: The source prefix's identifiers should be considered as names
+    :param path: A custom path to predictions TSV file
     """
-    grounder = get_grounder(target_prefixes, unnamed=unnamed)
+    if isinstance(target_prefixes, str):
+        target_prefixes = [target_prefixes]
+    grounder = pyobo.gilda_utils.get_grounder(target_prefixes, unnamed=unnamed)
     predictions = iter_prediction_tuples(
         prefix,
         relation=relation,
@@ -47,9 +60,9 @@ def append_gilda_predictions(
     )
     if custom_filter is not None:
         predictions = filter_custom(predictions, custom_filter)
-    predictions = filter_pyobo(predictions, prefix, target_prefixes)
+    predictions = filter_existing_xrefs(predictions, [prefix, *target_prefixes])
     predictions = sorted(predictions, key=_key)
-    append_prediction_tuples(predictions)
+    append_prediction_tuples(predictions, path=path)
 
 
 def iter_prediction_tuples(
@@ -61,7 +74,7 @@ def iter_prediction_tuples(
     identifiers_are_names: bool = False,
 ) -> Iterable[PredictionTuple]:
     """Iterate over prediction tuples for a given prefix."""
-    for t in iter_gilda_prediction_tuples(
+    for t in pyobo.gilda_utils.iter_gilda_prediction_tuples(
         prefix=prefix,
         relation=relation,
         grounder=grounder,
@@ -84,27 +97,31 @@ def filter_custom(
     logger.info("filtered out %d custom mapped matches", counter)
 
 
-def filter_pyobo(
-    predictions: Iterable[PredictionTuple],
-    source_prefixes: Union[str, Iterable[str]],
-    target_prefixes: Union[str, Iterable[str]],
+def filter_existing_xrefs(
+    predictions: Iterable[PredictionTuple], prefixes: Iterable[str]
 ) -> Iterable[PredictionTuple]:
     """Filter predictions that match xrefs already loaded through PyOBO."""
-    source_prefixes = (
-        {source_prefixes} if isinstance(source_prefixes, str) else set(source_prefixes)
-    )
-    target_prefixes = (
-        {target_prefixes} if isinstance(target_prefixes, str) else set(target_prefixes)
-    )
+    prefixes = set(prefixes)
+
+    entity_to_mapped_prefixes = defaultdict(set)
+    for prefix in prefixes:
+        for source_id, target_prefix, target_id in pyobo.get_xrefs_df(prefix).values:
+            entity_to_mapped_prefixes[prefix, source_id].add(target_prefix)
+            entity_to_mapped_prefixes[target_prefix, target_id].add(prefix)
+
     counter = 0
     for prediction in predictions:
+        source_id = bioregistry.standardize_identifier(
+            prediction.source_prefix, prediction.source_id
+        )
+        target_id = bioregistry.standardize_identifier(
+            prediction.target_prefix, prediction.target_identifier
+        )
         if (
-            prediction.source_prefix in source_prefixes
-            and prediction.target_prefix in target_prefixes
-            and isinstance(prediction.source_id, str)
-            and has_mapping(
-                prediction.source_prefix, prediction.source_id, prediction.target_prefix
-            )
+            prediction.target_prefix
+            in entity_to_mapped_prefixes[prediction.source_prefix, source_id]
+            or prediction.source_prefix
+            in entity_to_mapped_prefixes[prediction.target_prefix, target_id]
         ):
             counter += 1
             continue
@@ -114,8 +131,8 @@ def filter_pyobo(
 
 def has_mapping(prefix: str, identifier: str, target_prefix: str) -> bool:
     """Check if there's already a mapping available for this entity in a target namespace."""
-    return get_xref(prefix, identifier, target_prefix) is not None
+    return pyobo.get_xref(prefix, identifier, target_prefix) is not None
 
 
-def _key(t: PredictionTuple) -> Tuple[str, str]:
+def _key(t: PredictionTuple) -> tuple[str, str]:
     return t.source_prefix, t.source_name

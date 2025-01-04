@@ -19,7 +19,7 @@ for node, data in g.nodes(data=True):
     if matches and matches[0].term.db == "MESH":
         mappings[node] = matches[0].term.id
 
-print("Found %d UBERON->MESH mappings." % len(mappings))
+print(f"Found {len(mappings)} UBERON->MESH mappings.")
 
 predictions = []
 for uberon_id, mesh_id in mappings.items():
@@ -31,7 +31,7 @@ for uberon_id, mesh_id in mappings.items():
         target_prefix="mesh",
         target_identifier=mesh_id,
         target_name=mesh_client.get_mesh_name(mesh_id),
-        type="lexical",
+        type="semapv:LexicalMatching",
         confidence=0.9,
         source="generate_uberon_mesh_mappings.py",
     )

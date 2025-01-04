@@ -1,10 +1,9 @@
-Usage
-=====
-.. automodule:: biomappings
-    :members:
+Reference
+=========
+.. automodapi:: biomappings.gilda_utils
 
-.. automodule:: biomappings.gilda_utils
-    :members:
+.. automodapi:: biomappings.utils
 
-.. automodule:: biomappings.utils
-    :members:
+.. automodapi:: biomappings.testing
+
+.. automodapi:: biomappings.resources

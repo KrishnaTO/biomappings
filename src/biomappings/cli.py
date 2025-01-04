@@ -1,9 +1,10 @@
-# -*- coding: utf-8 -*-
-
 """The biomappings CLI."""
 
+import sys
+from pathlib import Path
+
 import click
-from more_click import make_web_command
+from more_click import run_app
 
 from .export_sssom import sssom
 from .graph import charts
@@ -19,8 +20,43 @@ def main():
 
 
 if get_git_hash() is not None:
-    # This command is called "web" by default
-    main.add_command(make_web_command("biomappings.wsgi:app"))
+
+    @main.command()
+    @click.option("--predictions-path", type=click.Path(), help="A predictions TSV file path")
+    @click.option("--positives-path", type=click.Path(), help="A positives curation TSV file path")
+    @click.option("--negatives-path", type=click.Path(), help="A negatives curation TSV file path")
+    @click.option("--unsure-path", type=click.Path(), help="An unsure curation TSV file path")
+    def web(
+        predictions_path: Path,
+        positives_path: Path,
+        negatives_path: Path,
+        unsure_path: Path,
+    ):
+        """Run the biomappings web app."""
+        from .wsgi import get_app
+
+        app = get_app(
+            predictions_path=predictions_path,
+            positives_path=positives_path,
+            negatives_path=negatives_path,
+            unsure_path=unsure_path,
+        )
+        run_app(app, with_gunicorn=False)
+
+    @main.command()
+    @click.option("--path", required=True, type=click.Path(), help="A predictions TSV file path")
+    def curate(path):
+        """Run a target curation web app."""
+        from .resources import _load_table
+        from .wsgi import get_app
+
+        target_curies = []
+        for mapping in _load_table(path):
+            target_curies.append((mapping["source prefix"], mapping["source identifier"]))
+            target_curies.append((mapping["target prefix"], mapping["target identifier"]))
+        app = get_app(target_curies=target_curies)
+        run_app(app, with_gunicorn=False)
+
 else:
 
     @main.command()
@@ -46,12 +82,11 @@ def update(ctx: click.Context):
     ctx.invoke(sssom)
     click.secho("Generating charts", fg="green")
     ctx.invoke(charts)
-    click.secho("Uploading to NDEx", fg="green")
-    ctx.invoke(ndex)
 
 
 @main.command()
-def lint():
+@click.option("--standardize", is_flag=True)
+def lint(standardize: bool):
     """Sort files and remove duplicates."""
     from .resources import (
         lint_false_mappings,
@@ -60,10 +95,10 @@ def lint():
         lint_unsure_mappings,
     )
 
-    lint_true_mappings()
-    lint_false_mappings()
-    lint_unsure_mappings()
-    lint_predictions()
+    lint_true_mappings(standardize=standardize)
+    lint_false_mappings(standardize=standardize)
+    lint_unsure_mappings(standardize=standardize)
+    lint_predictions(standardize=standardize)
 
 
 @main.command()
@@ -72,6 +107,10 @@ def prune(prefixes):
     """Prune inferred mappings between the given prefixes from the predictions."""
     from .mapping_graph import get_custom_filter
     from .resources import filter_predictions
+
+    if len(prefixes) < 2:
+        click.secho("Must give at least 2 prefixes", fg="red")
+        return sys.exit(0)
 
     cf = get_custom_filter(prefixes[0], prefixes[1:])
     filter_predictions(cf)

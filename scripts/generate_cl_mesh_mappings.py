@@ -1,4 +1,5 @@
 """Generate mappings using Gilda from CL to MeSH."""
+
 import re
 
 import gilda
@@ -20,7 +21,7 @@ for node, data in g.nodes(data=True):
         continue
 
     has_mesh_id = False
-    for value in [data.get("def", "")] + data.get("synonym", []) + data.get("xref", []):
+    for value in [data.get("def", ""), *data.get("synonym", []), *data.get("xref", [])]:
         if re.findall(mesh_tree_pattern, value) or re.findall(mesh_id_pattern, value):
             has_mesh_id = True
             break
@@ -42,13 +43,13 @@ for node, data in g.nodes(data=True):
         groundings = match.get_groundings()
         mesh_ids |= {id for ns, id in groundings if ns == "MESH"}
     if len(mesh_ids) > 1:
-        print("Multiple MESH IDs for %s" % node)
+        print(f"Multiple MESH IDs for {node}")
     elif len(mesh_ids) == 1:
-        mesh_id = list(mesh_ids)[0]
+        mesh_id = next(iter(mesh_ids))
         mappings[node] = mesh_id
 
 
-print("Found %d CL->MESH mappings." % len(mappings))
+print(f"Found {len(mappings)} CL->MESH mappings.")
 
 predictions = []
 for cl_id, mesh_id in mappings.items():
@@ -60,7 +61,7 @@ for cl_id, mesh_id in mappings.items():
         target_prefix="mesh",
         target_identifier=mesh_id,
         target_name=mesh_client.get_mesh_name(mesh_id),
-        type="lexical",
+        type="semapv:LexicalMatching",
         confidence=0.9,
         source="generate_cl_mesh_mappings.py",
     )

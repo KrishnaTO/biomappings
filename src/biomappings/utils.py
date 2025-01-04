@@ -1,19 +1,41 @@
-# -*- coding: utf-8 -*-
-
 """Utilities."""
 
 import os
 import re
-from subprocess import CalledProcessError, check_output  # noqa: S404
-from typing import Any, Mapping, Optional, Tuple
+from collections.abc import Mapping
+from pathlib import Path
+from subprocess import CalledProcessError, check_output
+from typing import Any, Optional
 
 import bioregistry
 
-HERE = os.path.dirname(os.path.abspath(__file__))
-RESOURCE_PATH = os.path.abspath(os.path.join(HERE, "resources"))
-DOCS = os.path.abspath(os.path.join(HERE, os.pardir, os.pardir, "docs"))
-IMG = os.path.join(DOCS, "img")
-DATA = os.path.join(DOCS, "_data")
+__all__ = [
+    "CMapping",
+    "InvalidIdentifier",
+    "InvalidIdentifierPattern",
+    "InvalidNormIdentifier",
+    "UnregisteredPrefix",
+    "UnstandardizedPrefix",
+    "check_valid_prefix_id",
+    "get_canonical_tuple",
+    "get_curie",
+    "get_git_hash",
+    "get_script_url",
+]
+
+HERE = Path(__file__).parent.resolve()
+ROOT = HERE.parent.parent.resolve()
+RESOURCE_PATH = HERE.joinpath("resources")
+DOCS = ROOT.joinpath("docs")
+IMG = DOCS.joinpath("img")
+DATA = DOCS.joinpath("_data")
+
+OVERRIDE_MIRIAM = {
+    # ITO is very messy (combines mostly numbers with a few
+    # text based labels for top-level terms), has weird bananas,
+    # and also not very enjoyable to use so don't worry about them
+    "ito",
+}
 
 
 def get_git_hash() -> Optional[str]:
@@ -58,8 +80,8 @@ def get_branch() -> str:
 def _git(*args: str) -> Optional[str]:
     with open(os.devnull, "w") as devnull:
         try:
-            ret = check_output(  # noqa: S603,S607
-                ["git", *args],
+            ret = check_output(  # noqa: S603
+                ["git", *args],  # noqa:S607
                 cwd=os.path.dirname(__file__),
                 stderr=devnull,
             )
@@ -81,7 +103,7 @@ def get_script_url(fname: str) -> str:
     return f"https://github.com/biomappings/biomappings/blob/{commit_hash}/scripts/{script_name}"
 
 
-def get_canonical_tuple(mapping: Mapping[str, Any]) -> Tuple[str, str, str, str]:
+def get_canonical_tuple(mapping: Mapping[str, Any]) -> tuple[str, str, str, str]:
     """Get the canonical tuple from a mapping entry."""
     source = mapping["source prefix"], mapping["source identifier"]
     target = mapping["target prefix"], mapping["target identifier"]
@@ -106,7 +128,7 @@ class UnstandardizedPrefix(ValueError):
         self.prefix = prefix
         self.norm_prefix = norm_prefix
 
-    def __str__(self) -> str:  # noqa:D105
+    def __str__(self) -> str:
         return f"{self.prefix} should be standardized to {self.norm_prefix}"
 
 
@@ -136,7 +158,7 @@ class InvalidIdentifierPattern(InvalidIdentifier):
         super().__init__(prefix, identifier)
         self.pattern = pattern
 
-    def __str__(self) -> str:  # noqa:D105
+    def __str__(self) -> str:
         return f"{self.prefix}:{self.identifier} does not match pattern {self.pattern}"
 
 
@@ -153,7 +175,7 @@ class InvalidNormIdentifier(InvalidIdentifier):
         super().__init__(prefix, identifier)
         self.norm_identifier = norm_identifier
 
-    def __str__(self) -> str:  # noqa:D105
+    def __str__(self) -> str:
         return f"{self.prefix}:{self.identifier} does not match normalized CURIE {self.prefix}:{self.norm_identifier}"
 
 
@@ -187,6 +209,9 @@ def check_valid_prefix_id(prefix: str, identifier: str):
         raise UnstandardizedPrefix(prefix, resource.prefix)
     miriam_prefix = resource.get_miriam_prefix()
 
+    if miriam_prefix in OVERRIDE_MIRIAM:
+        return
+
     # If this resource has a mapping to MIRIAM, the MIRIAM-specific
     # normalization will be applied, which e.g., adds missing
     # redundant prefixes into the local unique identifiers
@@ -199,7 +224,12 @@ def check_valid_prefix_id(prefix: str, identifier: str):
             )
         if norm_id != identifier:
             raise InvalidNormIdentifier(prefix, identifier, norm_id)
-        pattern = re.compile(resource.miriam["pattern"])
+        if prefix == "pr":
+            pattern = None  # identifiers.org is broken for uniprot in PR
+        elif prefix == "obi":
+            pattern = re.compile(r"^OBI:\d{7,8}$")  # identifiers.org is broken for OBI
+        else:
+            pattern = re.compile(resource.miriam["pattern"])
 
     # If this resource does not have a mapping to MIRIAM, then
     # the Bioregistry normalization will be applied, which e.g.,
@@ -214,9 +244,15 @@ def check_valid_prefix_id(prefix: str, identifier: str):
         raise InvalidIdentifierPattern(prefix, identifier, pattern)
 
 
-def get_curie(prefix: str, identifier: str) -> str:
+def get_curie(prefix: str, identifier: str, *, preferred: bool = False) -> str:
     """Get a normalized curie from a pre-parsed prefix/identifier pair."""
-    p, i = bioregistry.normalize_parsed_curie(prefix, identifier)
-    if p is None or i is None:
-        raise ValueError
-    return f"{p}:{i}"
+    prefix_norm, identifier_norm = bioregistry.normalize_parsed_curie(prefix, identifier)
+    if prefix_norm is None or identifier_norm is None:
+        raise ValueError(f"could not normalize {prefix}:{identifier}")
+    if preferred:
+        prefix_norm = bioregistry.get_preferred_prefix(prefix_norm) or prefix_norm
+    return f"{prefix_norm}:{identifier_norm}"
+
+
+#: A filter 3-dictionary of source prefix to target prefix to source identifier to target identifier
+CMapping = Mapping[str, Mapping[str, Mapping[str, str]]]

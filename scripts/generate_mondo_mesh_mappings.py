@@ -1,4 +1,5 @@
 """Generate mappings using Gilda from MONDO to MeSH."""
+
 from collections import Counter
 
 import gilda
@@ -41,7 +42,7 @@ for node, data in g.nodes(data=True):
                 mappings[node] = matches[0].term.id
 
 
-print("Found %d MONDO->MESH mappings." % len(mappings))
+print(f"Found {len(mappings)} MONDO->MESH mappings.")
 
 mappings = {
     k: v
@@ -53,7 +54,7 @@ cnt = Counter(mappings.values())
 
 mappings = {k: v for k, v in mappings.items() if cnt[v] == 1}
 
-print("Found %d MONDO->MESH mappings." % len(mappings))
+print(f"Found {len(mappings)} MONDO->MESH mappings.")
 
 predictions = []
 for mondo_id, mesh_id in mappings.items():
@@ -65,7 +66,7 @@ for mondo_id, mesh_id in mappings.items():
         target_prefix="mesh",
         target_identifier=mesh_id,
         target_name=mesh_client.get_mesh_name(mesh_id),
-        type="lexical",
+        type="semapv:LexicalMatching",
         confidence=0.9,
         source="generate_mondo_mesh_mappings.py",
     )

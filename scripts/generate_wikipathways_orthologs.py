@@ -1,9 +1,7 @@
-# -*- coding: utf-8 -*-
-
 """Generate orthologous relations between WikiPathways."""
 
 import itertools as itt
-from typing import Iterable
+from collections.abc import Iterable
 
 import pyobo
 from gilda.process import normalize
@@ -46,7 +44,7 @@ def iterate_orthologous_lexical_matches(prefix: str = "wikipathways") -> Iterabl
                 prefix,
                 target_id,
                 target_name,
-                "lexical",
+                "semapv:LexicalMatching",
                 0.95,
                 provenance,
             )

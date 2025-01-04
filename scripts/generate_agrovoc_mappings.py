@@ -1,5 +1,3 @@
-# -*- coding: utf-8 -*-
-
 """Generate mappings from AGRO to AGROVOC.
 
 Note: this script requires a minimum of PyOBO v0.7.0 to run.
@@ -49,7 +47,7 @@ def main():
                     scored_match.term.db.lower(),
                     scored_match.term.id,
                     scored_match.term.entry_name,
-                    "lexical",
+                    "semapv:LexicalMatching",
                     scored_match.score,
                     provenance,
                 )
